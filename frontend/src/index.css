@@ -27,3 +27,20 @@ main {
 	/* color: #000000; */
 	opacity: 1;
 }
+
+.carousel-item {
+	height: 88vh;
+	min-height: 250px;
+	background: no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.featuredIrems {
+	font: normal normal bold 40px/160px Adobe Garamond Pro;
+	letter-spacing: 0.8px;
+	color: #145059;
+	opacity: 1;
+}

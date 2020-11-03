@@ -1,14 +1,20 @@
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Carousel from './components/Carousel'
 
 function App() {
 	return (
 		<>
 			<Header />
-			<main className='py-3'>
+			<main>
+				<Carousel />
 				<Container>
-					<h1> Welcome To Artemos</h1>
+					<Row>
+						<Col className='text-center py-3'>
+							<h1 className='featuredIrems'>Featured Items</h1>
+						</Col>
+					</Row>
 				</Container>
 			</main>
 			<Footer />
