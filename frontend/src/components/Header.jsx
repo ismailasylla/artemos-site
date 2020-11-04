@@ -5,7 +5,6 @@ import {
 	Container,
 	Form,
 	NavDropdown,
-	FormControl,
 	Button,
 } from 'react-bootstrap'
 
@@ -15,7 +14,7 @@ const Header = () => {
 			<Navbar bg='light' expand='lg'>
 				<Container>
 					<Navbar.Brand href='/' className='logo '>
-						Artemos
+						ARTEMOS
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls='basic-navbar-nav' />
 					<Navbar.Collapse id='basic-navbar-nav'>
@@ -58,19 +57,29 @@ const Header = () => {
 							</Button>{' '}
 						</div>
 						<Form inline>
-							<FormControl
+							{/* <FormControl
 								type='text'
 								placeholder='Search'
 								className='mr-sm-2'
 								size='sm'
-							/>
+							/> */}
+
+							<div class='form-group has-search'>
+								<span class='fa fa-search form-control-feedback'></span>
+								<input
+									type='text'
+									className='form-control'
+									placeholder='Search'
+								/>
+							</div>
+
 							{/* <Button variant='outline-success' size='sm'>
 							Search
 						</Button> */}
 						</Form>
 						<Nav.Link href='#link'>
 							{' '}
-							<i className='fas fa-shopping-cart'></i> Cart
+							<i className='fas fa-shopping-cart fa-2x'></i>
 						</Nav.Link>
 					</Navbar.Collapse>
 				</Container>

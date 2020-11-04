@@ -1,7 +1,7 @@
-import { Container, Row, Col } from 'react-bootstrap'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Carousel from './components/Carousel'
+import FeaturedItems from './components/FeaturedItems'
 
 function App() {
 	return (
@@ -9,13 +9,7 @@ function App() {
 			<Header />
 			<main>
 				<Carousel />
-				<Container>
-					<Row>
-						<Col className='text-center py-3'>
-							<h1 className='featuredIrems'>Featured Items</h1>
-						</Col>
-					</Row>
-				</Container>
+				<FeaturedItems />
 			</main>
 			<Footer />
 		</>
