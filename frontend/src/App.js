@@ -1,10 +1,18 @@
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Carousel from './components/Carousel'
+import FeaturedItems from './components/FeaturedItems'
+
 function App() {
 	return (
-		<div>
-			<>
-				<h1>Artemos</h1>
-			</>
-		</div>
+		<>
+			<Header />
+			<main>
+				<Carousel />
+				<FeaturedItems />
+			</main>
+			<Footer />
+		</>
 	)
 }
 
