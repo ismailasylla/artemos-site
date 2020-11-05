@@ -57,18 +57,11 @@ const Header = () => {
 							</Button>{' '}
 						</div>
 						<Form inline>
-							{/* <FormControl
-								type='text'
-								placeholder='Search'
-								className='mr-sm-2'
-								size='sm'
-							/> */}
-
-							<div class='form-group has-search'>
+							<div class='form-group has-search  '>
 								<span class='fa fa-search form-control-feedback'></span>
 								<input
 									type='text'
-									className='form-control'
+									className='form-control headerInput'
 									placeholder='Search'
 								/>
 							</div>

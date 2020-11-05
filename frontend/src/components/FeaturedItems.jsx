@@ -7,11 +7,13 @@ const FeaturedItems = () => {
 		<div>
 			<Container>
 				<Row>
-					<Col className='text-center py-3'>
+					<Col className='text-center py-3 '>
 						<h1 className='featuredItems'>Featured Items</h1>
-						<hr className='black-line' />
-						<hr className='red-line' />
-						<hr className='green-line' />
+						<div className='container d-flex justify-content-center'>
+							<hr className='black-line' />
+							<hr className='red-line' />
+							<hr className='green-line' />
+						</div>
 					</Col>
 				</Row>
 			</Container>

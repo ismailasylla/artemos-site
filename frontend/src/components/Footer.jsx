@@ -12,9 +12,9 @@ const Footer = () => {
 			</Container> */}
 
 			<div className='footer' id='footer'>
-				<div className='container-fluid ml-5 mr-5'>
-					<div className='row'>
-						<div className='col-lg-2  col-md-2 col-sm-4 col-xs-6'>
+				<div className='container-fluid '>
+					<div className='row '>
+						<div className='col-lg-2  col-md-2 col-sm-4 col-xs-6 container-fluid'>
 							<h6> Buy </h6>
 							<ul>
 								<li>
@@ -93,6 +93,73 @@ const Footer = () => {
 									<a href='#'> PO BOX 0000 </a>{' '}
 								</li>
 							</ul>
+							<ul className='nav nav-pills payments '>
+								<li
+									style={{
+										fontSize: '3em',
+										color: 'rgb(23, 34, 116)',
+									}}>
+									<i class='fab fa-cc-visa '></i>
+								</li>
+								<li
+									style={{
+										fontSize: '3em',
+										color: '#f7981b',
+									}}>
+									<i class='fab fa-cc-mastercard'></i>
+								</li>
+								<li
+									style={{
+										fontSize: '3em',
+										color: 'rgb(108, 196, 238)',
+									}}>
+									<i class='fab fa-cc-amex'></i>
+								</li>
+								<li
+									style={{
+										fontSize: '3em',
+										color: 'rgb(37, 59, 128)',
+									}}>
+									<i class='fab fa-cc-paypal'></i>
+								</li>
+							</ul>
+							<ul className='social'>
+								<li>
+									{' '}
+									<a href='#'>
+										{' '}
+										<i class='fab fa-facebook-f'></i>
+									</a>{' '}
+								</li>
+								<li>
+									{' '}
+									<a href='#'>
+										{' '}
+										<i class='fab fa-twitter'></i>
+									</a>{' '}
+								</li>
+								<li>
+									{' '}
+									<a href='#'>
+										{' '}
+										<i class='fab fa-google-plus-square'></i>
+									</a>{' '}
+								</li>
+								<li>
+									{' '}
+									<a href='#'>
+										{' '}
+										<i class='fab fa-pinterest'></i>
+									</a>{' '}
+								</li>
+								<li>
+									{' '}
+									<a href='#'>
+										{' '}
+										<i class='fab fa-youtube'></i>
+									</a>{' '}
+								</li>
+							</ul>
 						</div>
 						<div className='col-lg-3  col-md-3 col-sm-6 col-xs-12 '>
 							<h6> Subscribe to our Newsletter </h6>
@@ -108,73 +175,34 @@ const Footer = () => {
 											<div className='col-sm-10'>
 												<form>
 													<div className='form-group'>
-														<label for='exampleInputEmail1'>
+														<label for='exampleInputEmail1' className='mr-5'>
 															Email address
 														</label>
 														<input
 															type='email'
-															className='form-control ml-5'
+															className='form-control ml-5 footerInput'
 															id='exampleInputEmail1'
 															aria-describedby='emailHelp'
 														/>
-														<small
-															id='emailHelp'
-															className='form-text text-muted'>
-															We'll never share your email with anyone else.
-														</small>
+														<Button
+															style={{ width: '53%', float: 'left' }}
+															variant='primary'
+															className='button-color m-2 ml-5  cardbtn'
+															size='sm'>
+															<i className=''></i> Subscribe
+														</Button>{' '}
 													</div>
 													{/* <button type='submit' className='btn btn-success'>
 														Submit
 													</button> */}
-													<Button
-														variant='primary'
-														className='button-color m-2 ml-5 float-left cardbtn'
-														size='sm'>
-														<i className=''></i> Subscribe
-													</Button>{' '}
 												</form>
 											</div>
 										</div>
 									</div>
 								</li>
 							</ul>
-							<ul className='social'>
-								<li>
-									{' '}
-									<a href='#'>
-										{' '}
-										<i className=' fa fa-facebook'> </i>{' '}
-									</a>{' '}
-								</li>
-								<li>
-									{' '}
-									<a href='#'>
-										{' '}
-										<i className='fa fa-twitter'> </i>{' '}
-									</a>{' '}
-								</li>
-								<li>
-									{' '}
-									<a href='#'>
-										{' '}
-										<i className='fa fa-google-plus'> </i>{' '}
-									</a>{' '}
-								</li>
-								<li>
-									{' '}
-									<a href='#'>
-										{' '}
-										<i className='fa fa-pinterest'> </i>{' '}
-									</a>{' '}
-								</li>
-								<li>
-									{' '}
-									<a href='#'>
-										{' '}
-										<i className='fa fa-youtube'> </i>{' '}
-									</a>{' '}
-								</li>
-							</ul>
+
+							{/* nav nav-pills payments */}
 						</div>
 					</div>
 				</div>
@@ -189,22 +217,6 @@ const Footer = () => {
 						{' '}
 						Copyright © artemos 2020. All right reserved.{' '}
 					</p>
-					<div className='pull-right'>
-						<ul className='nav nav-pills payments'>
-							<li>
-								<i className='fa fa-cc-visa'></i>
-							</li>
-							<li>
-								<i className='fa fa-cc-mastercard'></i>
-							</li>
-							<li>
-								<i className='fa fa-cc-amex'></i>
-							</li>
-							<li>
-								<i className='fa fa-cc-paypal'></i>
-							</li>
-						</ul>
-					</div>
 				</div>
 			</div>
 		</footer>

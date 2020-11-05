@@ -345,12 +345,20 @@ h6.carous-header {
 .footer-bottom {
 	background: #ffffff;
 	border-top: 1px solid #dddddd;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	/* padding-top: 10px; */
+	/* padding-bottom: 10px; */
 }
 .footer-bottom p.pull-left {
 	padding-top: 6px;
 }
 .payments {
 	font-size: 1.5em;
+}
+
+/* footer input box */
+.footerInput {
+	width: 53% !important;
+}
+.headerInput {
+	width: 320px !important;
 }
