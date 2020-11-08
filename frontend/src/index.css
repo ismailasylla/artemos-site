@@ -606,3 +606,31 @@ h6.carous-header {
 	background: #eaeaea 0% 0% no-repeat padding-box;
 	opacity: 1;
 }
+
+.sold-footer-header1 {
+	text-align: center;
+	font: normal normal bold 102px/78px Heading Compressed Pro;
+	letter-spacing: 0px;
+	color: #c1c1c1;
+	text-transform: uppercase;
+	opacity: 0.5;
+}
+
+.sold-footer-header2 {
+	font: normal normal bold 102px/78px Heading Compressed Pro;
+	letter-spacing: 0px;
+	color: #ffffff;
+	text-transform: uppercase;
+	/* opacity: 0.17; */
+
+	/* margin-left: 145px; */
+}
+
+.sold-footer {
+	/* padding: 10px; */
+	text-align: center;
+	color: white;
+	font-size: 30px;
+	background: #145059 0% 0% no-repeat padding-box;
+	opacity: 1;
+}
