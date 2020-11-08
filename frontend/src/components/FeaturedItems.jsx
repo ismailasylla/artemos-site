@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-// import '../components/featured.css'
+import FeaturedFooter from './FeaturedFooter'
 
 const FeaturedItems = () => {
 	return (
@@ -17,6 +17,8 @@ const FeaturedItems = () => {
 					</Col>
 				</Row>
 			</Container>
+			{/* // Featured items footer */}
+			<FeaturedFooter />
 		</div>
 	)
 }

@@ -14,17 +14,20 @@ const Carousel = () => {
 		// lineHeight: '1',
 		// width: '1920px',
 		// height: '820px',
+		backgroundSize: 'cover',
 
 		backgroundImage: `url(${Background1})`,
 	}
 	const slider2 = {
 		// width: '100%',
 		// height: '800px',
+		backgroundSize: 'cover',
 		backgroundImage: `url(${Background2})`,
 	}
 	const slider3 = {
 		// width: '100%',
 		// height: '400px',
+		backgroundSize: 'cover',
 		backgroundImage: `url(${Background3})`,
 	}
 
@@ -44,7 +47,7 @@ const Carousel = () => {
 				</ol>
 				<div className='carousel-inner' role='listbox'>
 					<div className='carousel-item active' style={slider1}>
-						<div
+						{/* <div
 							className='carousel-caption d-none d-md-block col-sm-6 col-md-6 col-lg-3'
 							style={{ float: 'left', marginBottom: '110px' }}>
 							<h6 className='display-4 carous-header mb-5'>
@@ -58,7 +61,7 @@ const Carousel = () => {
 								takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
 								dolor sit amet.
 							</p>
-						</div>
+						</div> */}
 					</div>
 					<div className='carousel-item' style={slider2}>
 						<div className='carousel-caption d-none d-md-block'>
@@ -97,7 +100,7 @@ const Carousel = () => {
 								</div>
 							</div> */}
 
-							<div className='card-group'>
+							{/* <div className='card-group'>
 								<div className='col-sm-6 col-md-6 col-lg-3 py-3'>
 									<div
 										className='card border-primary mb-3'
@@ -121,7 +124,7 @@ const Carousel = () => {
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
 					<div className='carousel-item' style={slider3}>

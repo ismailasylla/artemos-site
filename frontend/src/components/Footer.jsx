@@ -4,13 +4,6 @@ import { Button } from 'react-bootstrap'
 const Footer = () => {
 	return (
 		<footer className='text-gray-700 body-font'>
-			{/* <Container>
-				<Row>
-					<Col className='text-center py-3'>Copyright &copy; Artemos</Col>
-                </Row>
-                
-			</Container> */}
-
 			<div className='footer' id='footer'>
 				<div className='container-fluid '>
 					<div className='row '>
@@ -166,11 +159,6 @@ const Footer = () => {
 							<ul>
 								<li>
 									<div className='input-append newsletter-box text-center'>
-										{/* <input
-											type='text'
-											className='full text-center'
-											placeholder='Email '
-										/> */}
 										<div className='form-group row'>
 											<div className='col-sm-10'>
 												<form>
@@ -183,6 +171,7 @@ const Footer = () => {
 															className='form-control ml-5 footerInput'
 															id='exampleInputEmail1'
 															aria-describedby='emailHelp'
+															placeholder='Email'
 														/>
 														<Button
 															style={{ width: '53%', float: 'left' }}
@@ -192,9 +181,6 @@ const Footer = () => {
 															<i className=''></i> Subscribe
 														</Button>{' '}
 													</div>
-													{/* <button type='submit' className='btn btn-success'>
-														Submit
-													</button> */}
 												</form>
 											</div>
 										</div>
