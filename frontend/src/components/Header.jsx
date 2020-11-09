@@ -32,8 +32,8 @@ const Header = () => {
 									Separated link
 								</NavDropdown.Item>
 							</NavDropdown>
-							<Nav.Link href='#link'>Sell</Nav.Link>
 
+							<Nav.Link href='#link'>Sell</Nav.Link>
 							<NavDropdown title='Services' id='basic-nav-dropdown'>
 								<NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
 								<NavDropdown.Item href='#action/3.2'>
@@ -47,7 +47,9 @@ const Header = () => {
 									Separated link
 								</NavDropdown.Item>
 							</NavDropdown>
+							<Nav.Link href='#link'>Contact</Nav.Link>
 						</Nav>
+
 						<div className='m-2'>
 							<Button variant='primary' className='button-color m-2' size='sm'>
 								<i className='fas fa-user-plus'></i> Sign up

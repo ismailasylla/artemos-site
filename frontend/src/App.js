@@ -1,10 +1,9 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Contact from './components/Contact'
 import Carousel from './components/Carousel'
 import FeaturedItems from './components/FeaturedItems'
-
 import Partners from './components/Partners'
-
 import Sold from './components/Sold'
 
 function App() {
@@ -14,7 +13,7 @@ function App() {
 			<main>
 				<Carousel />
 				<FeaturedItems />
-
+				<Contact />
 				<Partners />
 
 				<Sold />

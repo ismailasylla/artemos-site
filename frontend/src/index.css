@@ -634,3 +634,34 @@ h6.carous-header {
 	background: #145059 0% 0% no-repeat padding-box;
 	opacity: 1;
 }
+
+/* *externalcss: flickity.css * / * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+} */
+
+body {
+	font-family: sans-serif;
+}
+
+.gallery {
+	background: #eee;
+}
+
+.gallery-cell {
+	width: 26%;
+	height: 200px;
+	margin-right: 10px;
+	/* background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e2db5c04-0c63-4900-b8b6-682de488f271/d3gn7sd-af0e9820-a024-44ab-84ed-b69b6bfdaa69.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZTJkYjVjMDQtMGM2My00OTAwLWI4YjYtNjgyZGU0ODhmMjcxXC9kM2duN3NkLWFmMGU5ODIwLWEwMjQtNDRhYi04NGVkLWI2OWI2YmZkYWE2OS5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.NevNWOkYu7yh8y-p1YkJa5WAXFu774IJBNI07prR1tc'); */
+	counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+	display: block;
+	text-align: center;
+	content: counter(gallery-cell);
+	line-height: 200px;
+	font-size: 80px;
+	/* color: white; */
+}
