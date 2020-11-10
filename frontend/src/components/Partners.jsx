@@ -16,7 +16,7 @@ const Partners = () => {
 					</Col>
 				</Row>
 			</Container>
-			<div class='container text-center my-3'>
+			{/* <div class='container text-center my-3'>
 				<div
 					id='recipeCarousel'
 					class='carousel slide w-100'
@@ -92,6 +92,15 @@ const Partners = () => {
 						<span class='sr-only'>Next</span>
 					</a>
 				</div>
+			</div> */}
+			<div
+				class='gallery js-flickity'
+				data-flickity-options='{ "wrapAround": true }'>
+				<div class='gallery-cell'></div>
+				<div class='gallery-cell'></div>
+				<div class='gallery-cell'></div>
+				<div class='gallery-cell'></div>
+				<div class='gallery-cell'></div>
 			</div>
 		</div>
 	)

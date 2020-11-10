@@ -1,7 +1,22 @@
 import React from 'react'
+// import background from '../images/art-bg.png'
 
 const Contact = () => {
+	// const bg = {
+	// 	// display: 'block',
+	// 	// height: '400px',
+	// 	// minWidth: '100%',
+	// 	// width: '100%',
+	// 	// maxWidth: '100%',
+	// 	// lineHeight: '1',
+	// 	// width: '1920px',
+	// 	// height: '820px',
+	// 	backgroundSize: 'cover',
+
+	// 	backgroundImage: `url(${background})`,
+	// }
 	return (
+		// <div style={{ backgroundImage: `url(${background})` }}>
 		<div>
 			<section className='text-gray-700 body-font relative'>
 				<div className='container px-5 py-24 mx-auto'>
