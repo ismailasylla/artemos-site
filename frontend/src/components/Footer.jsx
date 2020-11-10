@@ -86,34 +86,35 @@ const Footer = () => {
 									<a href='#'> PO BOX 0000 </a>{' '}
 								</li>
 							</ul>
+							{/* payments*/}
 							<ul className='nav nav-pills payments '>
 								<li
 									style={{
 										fontSize: '3em',
 										color: 'rgb(23, 34, 116)',
 									}}>
-									<i class='fab fa-cc-visa '></i>
+									<i className='fab fa-cc-visa '></i>
 								</li>
 								<li
 									style={{
 										fontSize: '3em',
 										color: '#f7981b',
 									}}>
-									<i class='fab fa-cc-mastercard'></i>
+									<i className='fab fa-cc-mastercard'></i>
 								</li>
 								<li
 									style={{
 										fontSize: '3em',
 										color: 'rgb(108, 196, 238)',
 									}}>
-									<i class='fab fa-cc-amex'></i>
+									<i className='fab fa-cc-amex'></i>
 								</li>
 								<li
 									style={{
 										fontSize: '3em',
 										color: 'rgb(37, 59, 128)',
 									}}>
-									<i class='fab fa-cc-paypal'></i>
+									<i className='fab fa-cc-paypal'></i>
 								</li>
 							</ul>
 							<ul className='social'>
@@ -121,35 +122,35 @@ const Footer = () => {
 									{' '}
 									<a href='#'>
 										{' '}
-										<i class='fab fa-facebook-f'></i>
+										<i className='fab fa-facebook-f'></i>
 									</a>{' '}
 								</li>
 								<li>
 									{' '}
 									<a href='#'>
 										{' '}
-										<i class='fab fa-twitter'></i>
+										<i className='fab fa-twitter'></i>
 									</a>{' '}
 								</li>
 								<li>
 									{' '}
 									<a href='#'>
 										{' '}
-										<i class='fab fa-google-plus-square'></i>
+										<i className='fab fa-linkedin'></i>
 									</a>{' '}
 								</li>
+								{/* <li>
+									{' '}
+									<a href='#'>
+										{' '}
+										<i className='fab fa-pinterest'></i>
+									</a>{' '}
+								</li> */}
 								<li>
 									{' '}
 									<a href='#'>
 										{' '}
-										<i class='fab fa-pinterest'></i>
-									</a>{' '}
-								</li>
-								<li>
-									{' '}
-									<a href='#'>
-										{' '}
-										<i class='fab fa-youtube'></i>
+										<i className='fab fa-youtube'></i>
 									</a>{' '}
 								</li>
 							</ul>

@@ -1,9 +1,30 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
+import background from '../images/black-art.jpg'
 
 const Sold = () => {
+	const wrap = {
+		display: 'flex',
+		backgroundImage: `url(${background})`,
+		height: '700px',
+		opacity: '1',
+		letterSpacing: '3.2px',
+	}
 	return (
 		<>
+			<div
+				className='d-flex justify-content-around align-items-center '
+				style={wrap}>
+				<h1 className='p-2 ' style={{ color: 'white' }}>
+					Collectible wealth
+				</h1>
+				<h1 className='p-2 ' style={{ color: 'white' }}>
+					TOKENIZATION
+				</h1>
+				<h1 className='p-2 ' style={{ color: 'white' }}>
+					FINE ART
+				</h1>
+			</div>
 			<div className='sold-footer '>
 				<h1 className='sold-footer-header1'>
 					BE A SELLER{' '}

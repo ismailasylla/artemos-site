@@ -627,7 +627,7 @@ h6.carous-header {
 }
 
 .sold-footer {
-	/* padding: 10px; */
+	padding: 30px;
 	text-align: center;
 	color: white;
 	font-size: 30px;
@@ -664,4 +664,12 @@ body {
 	line-height: 200px;
 	font-size: 80px;
 	/* color: white; */
+}
+
+/* Featured background 
+ */
+
+.featuredBg {
+	background: transparent 0% 0% no-repeat padding-box;
+	opacity: 1;
 }
