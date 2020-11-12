@@ -7,14 +7,17 @@ import {
 	NavDropdown,
 	Button,
 } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 	return (
 		<header>
 			<Navbar bg='light' expand='lg'>
 				<Container>
-					<Navbar.Brand href='/' className='logo '>
-						ARTEMOS
+					<Navbar.Brand className='logo '>
+						<Link to='/' style={{ textDecoration: 'none' }}>
+							ARTEMOS
+						</Link>
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls='basic-navbar-nav' />
 					<Navbar.Collapse id='basic-navbar-nav'>
@@ -32,8 +35,8 @@ const Header = () => {
 									Separated link
 								</NavDropdown.Item>
 							</NavDropdown>
-							<Nav.Link href='#link'>Sell</Nav.Link>
 
+							<Nav.Link href='#link'>Sell</Nav.Link>
 							<NavDropdown title='Services' id='basic-nav-dropdown'>
 								<NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
 								<NavDropdown.Item href='#action/3.2'>
@@ -47,7 +50,14 @@ const Header = () => {
 									Separated link
 								</NavDropdown.Item>
 							</NavDropdown>
+
+							<Nav.Link>
+								<Link to='/contact' style={{ textDecoration: 'none' }}>
+									Contact
+								</Link>
+							</Nav.Link>
 						</Nav>
+
 						<div className='m-2'>
 							<Button variant='primary' className='button-color m-2' size='sm'>
 								<i className='fas fa-user-plus'></i> Sign up
@@ -57,18 +67,11 @@ const Header = () => {
 							</Button>{' '}
 						</div>
 						<Form inline>
-							{/* <FormControl
-								type='text'
-								placeholder='Search'
-								className='mr-sm-2'
-								size='sm'
-							/> */}
-
-							<div class='form-group has-search'>
+							<div class='form-group has-search  '>
 								<span class='fa fa-search form-control-feedback'></span>
 								<input
 									type='text'
-									className='form-control'
+									className='form-control headerInput'
 									placeholder='Search'
 								/>
 							</div>
