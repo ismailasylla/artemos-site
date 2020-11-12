@@ -3,9 +3,10 @@ import { Card, Button } from 'react-bootstrap'
 import Background1 from '../images/background_image-1.png'
 import Background2 from '../images/background_image-2.png'
 import Background3 from '../images/background_image-3.png'
-import FeaturedItems from '../components/FeaturedItems'
+// import FeaturedItems from '../components/FeaturedItems'
 import Partners from '../components/Partners'
 import Sold from '../components/Sold'
+import Products from './products/Products'
 
 const Home = () => {
 	const slider1 = {
@@ -160,7 +161,8 @@ const Home = () => {
 					</a>
 				</div>
 			</div>
-			<FeaturedItems />
+			<Products />
+			{/* <FeaturedItems /> */}
 			<Sold />
 			<Partners />
 		</>

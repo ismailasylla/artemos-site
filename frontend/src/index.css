@@ -673,3 +673,27 @@ body {
 	background: transparent 0% 0% no-repeat padding-box;
 	opacity: 1;
 }
+
+/* .collectible {
+	width: 130px;
+	height: 195px;
+	background: url('./images/art-bg.png') no-repeat;
+	margin: 50px;
+} */
+
+.collectible:hover {
+	background: url('./images/background_image-3.png') no-repeat;
+	height: 700px;
+	/* width: 800vh; */
+}
+.tokenization:hover {
+	background: url('./images/background_image-3.png') no-repeat;
+	height: 700px;
+	/* width: 800vh; */
+}
+
+.fine-art:hover {
+	background: url('./images/background_image-3.png') no-repeat;
+	height: 700px;
+	/* width: 800vh; */
+}
