@@ -21,7 +21,12 @@ const Header = () => {
 					<Navbar.Collapse id='basic-navbar-nav'>
 						<Nav className='ml-auto'>
 							<NavDropdown title='Bye' id='basic-nav-dropdown'>
-								<NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
+								<LinkContainer
+									to='/products'
+									style={{ textDecoration: 'none' }}>
+									<NavDropdown.Item>Arts</NavDropdown.Item>
+								</LinkContainer>
+
 								<NavDropdown.Item href='#action/3.2'>
 									Another action
 								</NavDropdown.Item>
