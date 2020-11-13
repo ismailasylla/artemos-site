@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import Rating from './Rating'
 
 const Product = ({ product }) => {
 	return (
@@ -21,7 +22,15 @@ const Product = ({ product }) => {
 							{product.rating} from {product.numReviews} Reviews
 						</div>
 					</Card.Text>
-					<Card.Text as='h3'>AED{product.price} </Card.Text>
+					<Card.Text as='div'>
+						<Rating
+							value={product.rating}
+							text={`${product.numReviews} reviews`}
+						/>
+					</Card.Text>
+					<Card.Text as='h5' style={{ color: '#B12704' }}>
+						AED {product.price}{' '}
+					</Card.Text>
 				</Card.Body>
 				<Button variant='primary' className='button-color m-2' size='sm'>
 					Add to cart <i className='fas fa-plus'></i>

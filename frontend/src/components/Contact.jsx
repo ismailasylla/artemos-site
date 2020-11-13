@@ -2,6 +2,7 @@ import React from 'react'
 // import background from '../images/art-bg.png'
 
 const Contact = () => {
+	const email = 'ismail@alphaseed.tech'
 	// const bg = {
 	// 	// display: 'block',
 	// 	// height: '400px',
@@ -25,8 +26,7 @@ const Contact = () => {
 							Contact Us
 						</h1>
 						<p className='lg:w-2/3 mx-auto leading-relaxed text-base'>
-							Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-							gentrify.
+							If you have any query do not hesitate to reachout.
 						</p>
 					</div>
 					<div className='lg:w-1/2 md:w-2/3 mx-auto'>
@@ -78,9 +78,19 @@ const Contact = () => {
 								</button>
 							</div>
 							<div className='p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center'>
-								<a className='text-indigo-500'>example@email.com</a>
+								<a className='text-indigo-500' href={`mailto:${email}`}>
+									artemos@alphaseed.tech
+								</a>
 								<p className='leading-normal my-5'>
-									49 Smith St.
+									Office 1837, Central Park Tower, DIFC Dubai, United Arab
+									Emirates Email : hello@alphaseed.tech Phone : +971 4 572 4697
+									DIFC Courts and Smart Dubai launch joint taskforce for world’s
+									first Court of the Blockchain DIFC Courts and Smart Dubai
+									launch joint taskforce for world’s first Court of the
+									Blockchain Technology and Innovation Help Participants with
+									#Dubai30x30 Goals at DIFC Fitness Village Technology and
+									Innovation Help Participants with #Dubai30x30 Goals at DIFC
+									Fitness Village
 									<br />
 									Saint Cloud, MN 56301
 								</p>
