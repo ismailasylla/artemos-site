@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "Art listing & selling app",
   "main": "server.js",
-  "type":"module",
+  "type": "module",
   "dependencies": {
+    "colors": "^1.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.10.14",
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
