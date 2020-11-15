@@ -29,7 +29,7 @@ const Product = ({ product }) => {
 						/>
 					</Card.Text>
 					<Card.Text as='h5' style={{ color: '#B12704' }}>
-						AED {product.price}{' '}
+						$ {product.price}{' '}
 					</Card.Text>
 				</Card.Body>
 				<Button variant='primary' className='button-color m-2' size='sm'>

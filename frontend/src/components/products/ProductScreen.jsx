@@ -32,7 +32,7 @@ const ProductScreen = ({ match }) => {
 						</ListGroup.Item>
 					</ListGroup>
 					<ListGroup>
-						<div className='div' style={{ marginLeft: '14px' }}>
+						<div className=' my-2' style={{ marginLeft: '14px' }}>
 							<Rating
 								value={product.rating}
 								text={`${product.numReviews} reviews`}
@@ -40,7 +40,7 @@ const ProductScreen = ({ match }) => {
 						</div>
 					</ListGroup>
 					<ListGroup variant='flush'>
-						<ListGroup.Item>Price: AED {product.price}</ListGroup.Item>
+						<ListGroup.Item>Price: $ {product.price}</ListGroup.Item>
 					</ListGroup>
 					<ListGroup variant='flush'>
 						<ListGroup.Item>Description: {product.description}</ListGroup.Item>
@@ -53,7 +53,7 @@ const ProductScreen = ({ match }) => {
 								<Row>
 									<Col>Price: </Col>
 									<Col>
-										<strong>AED {product.price}</strong>
+										<strong>$ {product.price}</strong>
 									</Col>
 								</Row>
 							</ListGroup.Item>
