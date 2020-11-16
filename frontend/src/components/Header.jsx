@@ -7,23 +7,26 @@ import {
 	NavDropdown,
 	Button,
 } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
 
 const Header = () => {
 	return (
 		<header>
 			<Navbar bg='light' expand='lg'>
 				<Container>
-					<Navbar.Brand className='logo '>
-						<Link to='/' style={{ textDecoration: 'none' }}>
-							ARTEMOS
-						</Link>
-					</Navbar.Brand>
+					<LinkContainer to='/' style={{ textDecoration: 'none' }}>
+						<Navbar.Brand className='logo '>ARTEMOS</Navbar.Brand>
+					</LinkContainer>
 					<Navbar.Toggle aria-controls='basic-navbar-nav' />
 					<Navbar.Collapse id='basic-navbar-nav'>
 						<Nav className='ml-auto'>
 							<NavDropdown title='Bye' id='basic-nav-dropdown'>
-								<NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
+								<LinkContainer
+									to='/products'
+									style={{ textDecoration: 'none' }}>
+									<NavDropdown.Item>Arts</NavDropdown.Item>
+								</LinkContainer>
+
 								<NavDropdown.Item href='#action/3.2'>
 									Another action
 								</NavDropdown.Item>
@@ -50,12 +53,9 @@ const Header = () => {
 									Separated link
 								</NavDropdown.Item>
 							</NavDropdown>
-
-							<Nav.Link>
-								<Link to='/contact' style={{ textDecoration: 'none' }}>
-									Contact
-								</Link>
-							</Nav.Link>
+							<LinkContainer to='/contact' style={{ textDecoration: 'none' }}>
+								<Nav.Link>Contact</Nav.Link>
+							</LinkContainer>
 						</Nav>
 
 						<div className='m-2'>
@@ -80,10 +80,12 @@ const Header = () => {
 							Search
 						</Button> */}
 						</Form>
-						<Nav.Link href='#link'>
-							{' '}
-							<i className='fas fa-shopping-cart fa-2x'></i>
-						</Nav.Link>
+						<LinkContainer to='/cart'>
+							<Nav.Link>
+								{' '}
+								<i className='fas fa-shopping-cart fa-2x'>Cart</i>
+							</Nav.Link>
+						</LinkContainer>
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>

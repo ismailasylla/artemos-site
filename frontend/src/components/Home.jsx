@@ -1,36 +1,22 @@
 import React from 'react'
-import { Card, Button } from 'react-bootstrap'
 import Background1 from '../images/background_image-1.png'
 import Background2 from '../images/background_image-2.png'
 import Background3 from '../images/background_image-3.png'
-// import FeaturedItems from '../components/FeaturedItems'
 import Partners from '../components/Partners'
 import Sold from '../components/Sold'
 import Products from './products/Products'
 
 const Home = () => {
 	const slider1 = {
-		// display: 'block',
-		// height: '400px',
-		// minWidth: '100%',
-		// width: '100%',
-		// maxWidth: '100%',
-		// lineHeight: '1',
-		// width: '1920px',
-		// height: '820px',
 		backgroundSize: 'cover',
 
 		backgroundImage: `url(${Background1})`,
 	}
 	const slider2 = {
-		// width: '100%',
-		// height: '800px',
 		backgroundSize: 'cover',
 		backgroundImage: `url(${Background2})`,
 	}
 	const slider3 = {
-		// width: '100%',
-		// height: '400px',
 		backgroundSize: 'cover',
 		backgroundImage: `url(${Background3})`,
 	}
