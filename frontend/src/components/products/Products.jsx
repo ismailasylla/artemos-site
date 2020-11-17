@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Container, Row, Col } from 'react-bootstrap'
 import Product from './Product'
 import { listProducts } from '../../actions/productActions'
+import Message from '../Message'
+import Loader from '../Loader'
 import FeaturedFooter from '../FeaturedFooter'
 
 const Products = () => {
@@ -19,7 +21,7 @@ const Products = () => {
 		<div>
 			<Container>
 				<Row>
-					<Col className='text-center py-3 '>
+					<Col className='text-center py-5 '>
 						<h1 className='featuredItems'>Featured Products</h1>
 						<div className='container d-flex justify-content-center'>
 							<hr className='black-line' />
@@ -30,9 +32,9 @@ const Products = () => {
 				</Row>
 			</Container>
 			{loading ? (
-				<h1 className='text-center py-3 '>Loading...</h1>
+				<Loader />
 			) : error ? (
-				<h3 className='text-center py-3 '>{error}</h3>
+				<Message variant='danger'>{error}</Message>
 			) : (
 				<Container>
 					<Row>
