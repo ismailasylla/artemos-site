@@ -19,18 +19,16 @@ const Products = () => {
 
 	return (
 		<div>
-			<Container>
-				<Row>
-					<Col className='text-center py-5 '>
-						<h1 className='featuredItems'>Featured Products</h1>
-						<div className='container d-flex justify-content-center'>
-							<hr className='black-line' />
-							<hr className='red-line' />
-							<hr className='green-line' />
-						</div>
-					</Col>
-				</Row>
-			</Container>
+			<Row>
+				<Col className='text-center py-5 '>
+					<h1 className='featuredItems'>Featured Products</h1>
+					<div className='container d-flex justify-content-center'>
+						<hr className='black-line' />
+						<hr className='red-line' />
+						<hr className='green-line' />
+					</div>
+				</Col>
+			</Row>
 			{loading ? (
 				<Loader />
 			) : error ? (
