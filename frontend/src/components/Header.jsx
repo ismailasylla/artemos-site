@@ -8,6 +8,7 @@ import {
 	Button,
 } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
+import Logo from '../images/logo/logo.png'
 
 const Header = () => {
 	return (
@@ -15,7 +16,9 @@ const Header = () => {
 			<Navbar bg='light' expand='lg'>
 				<Container>
 					<LinkContainer to='/' style={{ textDecoration: 'none' }}>
-						<Navbar.Brand className='logo '>ARTEMOS</Navbar.Brand>
+						<Navbar.Brand className='logo '>
+							<img src={Logo} alt='' style={{ width: '144px' }} />
+						</Navbar.Brand>
 					</LinkContainer>
 					<Navbar.Toggle aria-controls='basic-navbar-nav' />
 					<Navbar.Collapse id='basic-navbar-nav'>
@@ -27,9 +30,7 @@ const Header = () => {
 									<NavDropdown.Item>Arts</NavDropdown.Item>
 								</LinkContainer>
 
-								<NavDropdown.Item href='#action/3.2'>
-									Another action
-								</NavDropdown.Item>
+								<NavDropdown.Item href='/Watches'>Watches</NavDropdown.Item>
 								<NavDropdown.Item href='#action/3.3'>
 									Something
 								</NavDropdown.Item>
@@ -41,18 +42,45 @@ const Header = () => {
 
 							<Nav.Link href='#link'>Sell</Nav.Link>
 							<NavDropdown title='Services' id='basic-nav-dropdown'>
-								<NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.2'>
-									Another action
+								<NavDropdown.Item href='#action/3.1'>
+									Art Registrar
 								</NavDropdown.Item>
+								<NavDropdown.Item href='#action/3.2'>
+									Archiving
+								</NavDropdown.Item>
+
 								<NavDropdown.Item href='#action/3.3'>
-									Something
+									Art Tokenization
 								</NavDropdown.Item>
 								<NavDropdown.Divider />
+								<NavDropdown.Item href='#action/3.3'>
+									Custody & Escrow
+								</NavDropdown.Item>
+								<NavDropdown.Item href='#action/3.3'>
+									Provenance
+								</NavDropdown.Item>
+								<NavDropdown.Item href='#action/3.3'>
+									Logisticsion
+								</NavDropdown.Item>
+								<NavDropdown.Item href='#action/3.3'>Finance</NavDropdown.Item>
+								<NavDropdown.Divider />
+								<NavDropdown.Item href='#action/3.3'>
+									Client Advisory
+								</NavDropdown.Item>
+
 								<NavDropdown.Item href='#action/3.4'>
-									Separated link
+									Collection Management
+								</NavDropdown.Item>
+								<NavDropdown.Item href='#action/3.4'>
+									Appraisals & Valuations
+								</NavDropdown.Item>
+								<NavDropdown.Item href='#action/3.4'>
+									Museum Services
 								</NavDropdown.Item>
 							</NavDropdown>
+							<LinkContainer to='/about' style={{ textDecoration: 'none' }}>
+								<Nav.Link>About Us</Nav.Link>
+							</LinkContainer>
 							<LinkContainer to='/contact' style={{ textDecoration: 'none' }}>
 								<Nav.Link>Contact</Nav.Link>
 							</LinkContainer>
