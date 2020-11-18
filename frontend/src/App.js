@@ -5,6 +5,7 @@ import Home from './components/Home'
 import { Switch, Route } from 'react-router-dom'
 import ProductScreen from './components/products/ProductScreen'
 import Products from './components/products/Products'
+import Cart from './components/screens/CartScreen'
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 					<Route path='/contact' component={Contact} />
 					<Route path='/product/:id' component={ProductScreen} />
 					<Route path='/products' component={Products} />
+					<Route path='/cart/:id?' component={Cart} />
 				</Switch>
 			</main>
 			<Footer />

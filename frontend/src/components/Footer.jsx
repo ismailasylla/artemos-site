@@ -12,19 +12,19 @@ const Footer = () => {
 							<ul>
 								<li>
 									{' '}
-									<a href='#'> Lorem Ipsum </a>{' '}
+									<a href={'/'}> Lorem Ipsum </a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href='#'> Lorem Ipsum </a>{' '}
+									<a href={'/'}> Lorem Ipsum </a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href='#'> Lorem Ipsum </a>{' '}
+									<a href={'/'}> Lorem Ipsum </a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href='#'> Lorem Ipsum </a>{' '}
+									<a href={'/'}> Lorem Ipsum </a>{' '}
 								</li>
 							</ul>
 						</div>
@@ -33,19 +33,19 @@ const Footer = () => {
 							<ul>
 								<li>
 									{' '}
-									<a href='#'> Fine Art </a>{' '}
+									<a href={'/'}> Fine Art </a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href='#'> Collectible</a>{' '}
+									<a href={'/'}> Collectible</a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href='#'> Wealth </a>{' '}
+									<a href={'/'}> Wealth </a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href='#'> Tokenization</a>{' '}
+									<a href={'/'}> Tokenization</a>{' '}
 								</li>
 							</ul>
 						</div>
@@ -54,19 +54,19 @@ const Footer = () => {
 							<ul>
 								<li>
 									{' '}
-									<a href='#'> Lorem Ipsum </a>{' '}
+									<a href={'/'}> Lorem Ipsum </a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href='#'> Lorem Ipsum </a>{' '}
+									<a href={'/'}> Lorem Ipsum </a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href='#'> Lorem Ipsum </a>{' '}
+									<a href={'/'}> Lorem Ipsum </a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href='#'> Lorem Ipsum </a>{' '}
+									<a href={'/'}> Lorem Ipsum </a>{' '}
 								</li>
 							</ul>
 						</div>
@@ -75,15 +75,15 @@ const Footer = () => {
 							<ul>
 								<li>
 									{' '}
-									<a href='#'> The address will be added here, UAE</a>{' '}
+									<a href={'/'}> The address will be added here, UAE</a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href='#'> +971 00 000 0000</a>{' '}
+									<a href={'/'}> +971 00 000 0000</a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href='#'> PO BOX 0000 </a>{' '}
+									<a href={'/'}> PO BOX 0000 </a>{' '}
 								</li>
 							</ul>
 							{/* payments*/}
@@ -120,35 +120,35 @@ const Footer = () => {
 							<ul className='social'>
 								<li>
 									{' '}
-									<a href='#'>
+									<a href={'/'}>
 										{' '}
 										<i className='fab fa-facebook-f'></i>
 									</a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href='#'>
+									<a href={'/'}>
 										{' '}
 										<i className='fab fa-twitter'></i>
 									</a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href='#'>
+									<a href={'/'}>
 										{' '}
 										<i className='fab fa-linkedin'></i>
 									</a>{' '}
 								</li>
 								{/* <li>
 									{' '}
-									<a href='#'>
+									<a href={'/'}>
 										{' '}
 										<i className='fab fa-pinterest'></i>
 									</a>{' '}
 								</li> */}
 								<li>
 									{' '}
-									<a href='#'>
+									<a href={'/'}>
 										{' '}
 										<i className='fab fa-youtube'></i>
 									</a>{' '}
@@ -164,7 +164,9 @@ const Footer = () => {
 											<div className='col-sm-10'>
 												<form>
 													<div className='form-group'>
-														<label for='exampleInputEmail1' className='mr-5'>
+														<label
+															htmlFor='exampleInputEmail1'
+															className='mr-5'>
 															Email address
 														</label>
 														<input

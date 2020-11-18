@@ -10,18 +10,28 @@ import {
 	Card,
 	Button,
 	Container,
+	Form,
 } from 'react-bootstrap'
 import Rating from './Rating'
 import Loader from '../Loader'
 import Message from '../Message'
 
-const ProductScreen = ({ match }) => {
+const ProductScreen = ({ history, match }) => {
+	const [qty, setQty] = useState(0)
+
 	const dispatch = useDispatch()
+
 	const productDetails = useSelector((state) => state.productDetails)
+
 	const { loading, error, product } = productDetails
+
 	useEffect(() => {
 		dispatch(listProductDetails(match.params.id))
 	}, [dispatch, match])
+
+	const addToCartHandler = () => {
+		history.push(`/cart/${match.params.id}?qty=${qty}`)
+	}
 
 	return (
 		<Container>
@@ -81,8 +91,28 @@ const ProductScreen = ({ match }) => {
 										</Col>
 									</Row>
 								</ListGroup.Item>
+								{product.countInStock > 0 && (
+									<ListGroup.Item>
+										<Row>
+											<Col>Qty</Col>
+											<Col>
+												<Form.Control
+													as='select'
+													value={qty}
+													onChange={(e) => setQty(e.target.value)}>
+													{[...Array(product.countInStock).keys()].map((x) => (
+														<option key={x + 1} value={x + 1}>
+															{x + 1}
+														</option>
+													))}
+												</Form.Control>
+											</Col>
+										</Row>
+									</ListGroup.Item>
+								)}
 								<ListGroup.Item>
 									<Button
+										onClick={addToCartHandler}
 										disabled={product.countInStock === 0}
 										className='btn btn-block button-color my-3'
 										variant='primary'

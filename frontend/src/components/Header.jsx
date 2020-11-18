@@ -95,8 +95,8 @@ const Header = () => {
 							</Button>{' '}
 						</div>
 						<Form inline>
-							<div class='form-group has-search  '>
-								<span class='fa fa-search form-control-feedback'></span>
+							<div className='form-group has-search  '>
+								<span className='fa fa-search form-control-feedback'></span>
 								<input
 									type='text'
 									className='form-control headerInput'
