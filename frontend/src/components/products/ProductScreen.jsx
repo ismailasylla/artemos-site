@@ -17,7 +17,7 @@ import Loader from '../Loader'
 import Message from '../Message'
 
 const ProductScreen = ({ history, match }) => {
-	const [qty, setQty] = useState(0)
+	const [qty, setQty] = useState(1)
 
 	const dispatch = useDispatch()
 

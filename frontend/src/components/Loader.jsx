@@ -2,8 +2,8 @@ import React from 'react'
 import { Spinner, Container } from 'react-bootstrap'
 const Loader = () => {
 	const SpinnerStyle = {
-		// width: '100px',
-		// hight: '100px',
+		width: '100px',
+		height: '100px',
 		margin: 'auto',
 		display: 'block',
 	}
