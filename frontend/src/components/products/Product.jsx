@@ -33,7 +33,7 @@ const Product = ({ product }) => {
 					</Card.Text>
 				</Card.Body>
 				<Button variant='primary' className='button-color m-2' size='sm'>
-					Add to cart <i className='fas fa-plus'></i>
+					Add to cart <i className='fab fa-opencart'></i>
 				</Button>{' '}
 			</Card>
 		</>

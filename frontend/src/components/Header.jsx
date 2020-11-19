@@ -111,7 +111,7 @@ const Header = () => {
 						<LinkContainer to='/cart'>
 							<Nav.Link>
 								{' '}
-								<i className='fas fa-shopping-cart fa-2x'>Cart</i>
+								<i className='fab fa-opencart fa-2x'>Cart</i>
 							</Nav.Link>
 						</LinkContainer>
 					</Navbar.Collapse>

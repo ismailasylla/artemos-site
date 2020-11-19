@@ -37,7 +37,7 @@ const ProductScreen = ({ history, match }) => {
 		<Container>
 			<Link to='/products'>
 				<Button variant='primary' className='button-color m-2 my-3' size='sm'>
-					<i className='fas fa-arrow-to-left'></i> Back
+					<i className='fas fa-arrow-left'></i> Back
 				</Button>{' '}
 			</Link>
 			{loading ? (
@@ -117,7 +117,7 @@ const ProductScreen = ({ history, match }) => {
 										className='btn btn-block button-color my-3'
 										variant='primary'
 										type='button'>
-										Add To Cart
+										<i className='fab fa-opencart fa-2x'></i> Add To Cart
 									</Button>
 								</ListGroup.Item>
 							</ListGroup>
