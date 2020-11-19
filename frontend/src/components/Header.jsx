@@ -78,9 +78,9 @@ const Header = () => {
 									Museum Services
 								</NavDropdown.Item>
 							</NavDropdown>
-							<LinkContainer to='/about' style={{ textDecoration: 'none' }}>
+							{/* <LinkContainer to='/about' style={{ textDecoration: 'none' }}>
 								<Nav.Link>About Us</Nav.Link>
-							</LinkContainer>
+							</LinkContainer> */}
 							<LinkContainer to='/contact' style={{ textDecoration: 'none' }}>
 								<Nav.Link>Contact</Nav.Link>
 							</LinkContainer>

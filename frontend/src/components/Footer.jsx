@@ -8,23 +8,23 @@ const Footer = () => {
 				<div className='container-fluid '>
 					<div className='row '>
 						<div className='col-lg-2  col-md-2 col-sm-4 col-xs-6 container-fluid'>
-							<h6> Buy </h6>
+							<h6> ONLINE </h6>
 							<ul>
 								<li>
 									{' '}
-									<a href={'/'}> Lorem Ipsum </a>{' '}
+									<a href={'/'}> Buy </a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href={'/'}> Lorem Ipsum </a>{' '}
+									<a href={'/'}> Sell </a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href={'/'}> Lorem Ipsum </a>{' '}
+									<a href={'/'}> List </a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href={'/'}> Lorem Ipsum </a>{' '}
+									<a href={'/'}> Auction </a>{' '}
 								</li>
 							</ul>
 						</div>
@@ -50,23 +50,23 @@ const Footer = () => {
 							</ul>
 						</div>
 						<div className='col-lg-2  col-md-2 col-sm-4 col-xs-6'>
-							<h6> Social Media Platforms </h6>
+							<h6> FOR INVESTORS </h6>
 							<ul>
 								<li>
 									{' '}
-									<a href={'/'}> Lorem Ipsum </a>{' '}
+									<a href={'/'}> Invest</a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href={'/'}> Lorem Ipsum </a>{' '}
+									<a href={'/'}>Tokenize </a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href={'/'}> Lorem Ipsum </a>{' '}
+									<a href={'/'}> Why to Invest</a>{' '}
 								</li>
 								<li>
 									{' '}
-									<a href={'/'}> Lorem Ipsum </a>{' '}
+									<a href={'/'}> Risks</a>{' '}
 								</li>
 							</ul>
 						</div>
