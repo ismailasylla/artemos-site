@@ -26,6 +26,8 @@ const CartScreen = ({ match, location, history }) => {
 
 	const { cartItems } = cart
 
+	console.log(cartItems)
+
 	useEffect(() => {
 		if (productId) {
 			dispatch(addToCart(productId, qty))
@@ -93,7 +95,7 @@ const CartScreen = ({ match, location, history }) => {
 											<Button
 												type='button'
 												variant='light'
-												onClick={removeFromCartHandler(item.product)}>
+												onClick={() => removeFromCartHandler(item.product)}>
 												<i className='fas fa-trash'></i>
 											</Button>
 										</Col>
@@ -118,10 +120,10 @@ const CartScreen = ({ match, location, history }) => {
 							</ListGroup.Item>
 							<ListGroupItem>
 								<Button
+									onClick={checkOutHandler}
 									type='button'
 									className='btn-block button-color my-3'
-									disabled={cartItems.length === 0}
-									onClick={checkOutHandler}>
+									disabled={cartItems.length === 0}>
 									<i className='fas fa-money-check'></i> Proceed To Checkout
 								</Button>
 							</ListGroupItem>
