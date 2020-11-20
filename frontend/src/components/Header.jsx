@@ -7,6 +7,7 @@ import {
 	NavDropdown,
 	Button,
 } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import { LinkContainer } from 'react-router-bootstrap'
 import Logo from '../images/logo/logo.png'
 
@@ -87,12 +88,24 @@ const Header = () => {
 						</Nav>
 
 						<div className='m-2'>
-							<Button variant='primary' className='button-color m-2' size='sm'>
-								<i className='fas fa-user-plus'></i> Sign up
-							</Button>{' '}
-							<Button variant='primary' className='button-color m-2' size='sm'>
-								<i className='fas fa-user'></i> Log in
-							</Button>{' '}
+							<>
+								<Link to='/login' style={{ textDecoration: 'none' }}>
+									<Button
+										variant='primary'
+										className='button-color m-2'
+										size='sm'>
+										<i className='fas fa-user'></i> Sign In
+									</Button>{' '}
+								</Link>
+								<Link to='/register' style={{ textDecoration: 'none' }}>
+									<Button
+										variant='primary'
+										className='button-color m-2'
+										size='sm'>
+										<i className='fas fa-user-plus'></i> Sign up
+									</Button>{' '}
+								</Link>
+							</>
 						</div>
 						<Form inline>
 							<div className='form-group has-search  '>

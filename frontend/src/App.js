@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom'
 import ProductScreen from './components/products/ProductScreen'
 import Products from './components/products/Products'
 import Cart from './components/screens/CartScreen'
+import LoginScreen from './components/screens/LoginScreen'
 
 function App() {
 	return (
@@ -13,11 +14,12 @@ function App() {
 			<Header />
 			<main>
 				<Switch>
-					<Route path='/' exact component={Home} />
+					<Route path='/login' component={LoginScreen} />
 					<Route path='/contact' component={Contact} />
 					<Route path='/product/:id' component={ProductScreen} />
 					<Route path='/products' component={Products} />
 					<Route path='/cart/:id?' component={Cart} />
+					<Route path='/' exact component={Home} />
 				</Switch>
 			</main>
 			<Footer />
