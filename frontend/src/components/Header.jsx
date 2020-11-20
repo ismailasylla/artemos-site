@@ -7,6 +7,7 @@ import {
 	NavDropdown,
 	Button,
 } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import { LinkContainer } from 'react-router-bootstrap'
 import Logo from '../images/logo/logo.png'
 
@@ -78,21 +79,33 @@ const Header = () => {
 									Museum Services
 								</NavDropdown.Item>
 							</NavDropdown>
-							<LinkContainer to='/about' style={{ textDecoration: 'none' }}>
+							{/* <LinkContainer to='/about' style={{ textDecoration: 'none' }}>
 								<Nav.Link>About Us</Nav.Link>
-							</LinkContainer>
+							</LinkContainer> */}
 							<LinkContainer to='/contact' style={{ textDecoration: 'none' }}>
 								<Nav.Link>Contact</Nav.Link>
 							</LinkContainer>
 						</Nav>
 
 						<div className='m-2'>
-							<Button variant='primary' className='button-color m-2' size='sm'>
-								<i className='fas fa-user-plus'></i> Sign up
-							</Button>{' '}
-							<Button variant='primary' className='button-color m-2' size='sm'>
-								<i className='fas fa-user'></i> Log in
-							</Button>{' '}
+							<>
+								<Link to='/login' style={{ textDecoration: 'none' }}>
+									<Button
+										variant='primary'
+										className='button-color m-2'
+										size='sm'>
+										<i className='fas fa-user'></i> Sign In
+									</Button>{' '}
+								</Link>
+								<Link to='/register' style={{ textDecoration: 'none' }}>
+									<Button
+										variant='primary'
+										className='button-color m-2'
+										size='sm'>
+										<i className='fas fa-user-plus'></i> Sign up
+									</Button>{' '}
+								</Link>
+							</>
 						</div>
 						<Form inline>
 							<div className='form-group has-search  '>
@@ -111,7 +124,7 @@ const Header = () => {
 						<LinkContainer to='/cart'>
 							<Nav.Link>
 								{' '}
-								<i className='fas fa-shopping-cart fa-2x'>Cart</i>
+								<i className='fab fa-opencart fa-2x'>Cart</i>
 							</Nav.Link>
 						</LinkContainer>
 					</Navbar.Collapse>

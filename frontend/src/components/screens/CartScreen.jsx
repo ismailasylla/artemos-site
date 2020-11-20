@@ -13,7 +13,7 @@ import {
 	ListGroupItem,
 } from 'react-bootstrap'
 import Message from '../../components/Message'
-import { addToCart } from '../../actions/cartActions'
+import { addToCart, removeFromCart } from '../../actions/cartActions'
 
 const CartScreen = ({ match, location, history }) => {
 	const productId = match.params.id
@@ -26,6 +26,8 @@ const CartScreen = ({ match, location, history }) => {
 
 	const { cartItems } = cart
 
+	console.log(cartItems)
+
 	useEffect(() => {
 		if (productId) {
 			dispatch(addToCart(productId, qty))
@@ -33,7 +35,7 @@ const CartScreen = ({ match, location, history }) => {
 	}, [dispatch, productId, qty])
 
 	const removeFromCartHandler = (id) => {
-		console.log('remove')
+		dispatch(removeFromCart(id))
 	}
 	const checkOutHandler = () => {
 		history.push('/login?redirect=shipping')
@@ -41,12 +43,23 @@ const CartScreen = ({ match, location, history }) => {
 
 	return (
 		<Container className='py-5'>
+			<Link to='/products'>
+				<Button variant='primary' className='button-color m-2 my-3' size='sm'>
+					<i className='fas fa-arrow-left'></i> Go Back
+				</Button>{' '}
+			</Link>
 			<Row>
 				<Col md={8}>
 					<h1>Shopping Cart</h1>
 					{cartItems.length === 0 ? (
 						<Message>
-							Your Cart is empty <Link to='/products'>Go Back</Link>
+							<strong>Your Cart is empty</strong>
+							<Link
+								to='/products'
+								style={{ textDecoration: 'none', color: '#145059' }}>
+								{' '}
+								<i className='fas fa-arrow-left'></i> Go Back
+							</Link>
 						</Message>
 					) : (
 						<ListGroup variant='flash'>
@@ -82,7 +95,7 @@ const CartScreen = ({ match, location, history }) => {
 											<Button
 												type='button'
 												variant='light'
-												onClick={removeFromCartHandler(item.product)}>
+												onClick={() => removeFromCartHandler(item.product)}>
 												<i className='fas fa-trash'></i>
 											</Button>
 										</Col>
@@ -107,11 +120,11 @@ const CartScreen = ({ match, location, history }) => {
 							</ListGroup.Item>
 							<ListGroupItem>
 								<Button
+									onClick={checkOutHandler}
 									type='button'
 									className='btn-block button-color my-3'
-									disabled={cartItems.length === 0}
-									onClick={checkOutHandler}>
-									Proceed To Checkout
+									disabled={cartItems.length === 0}>
+									<i className='fas fa-money-check'></i> Proceed To Checkout
 								</Button>
 							</ListGroupItem>
 						</ListGroup>
