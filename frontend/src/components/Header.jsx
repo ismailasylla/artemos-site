@@ -1,4 +1,6 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+
 import {
 	Navbar,
 	Nav,
@@ -7,11 +9,19 @@ import {
 	NavDropdown,
 	Button,
 } from 'react-bootstrap'
+import { logout } from '../actions/userActions'
 import { Link } from 'react-router-dom'
 import { LinkContainer } from 'react-router-bootstrap'
 import Logo from '../images/logo/logo.png'
 
 const Header = () => {
+	const dispatch = useDispatch()
+	const userLogin = useSelector((state) => state.userLogin)
+	const { userInfo } = userLogin
+
+	const logoutHandler = () => {
+		dispatch(logout())
+	}
 	return (
 		<header>
 			<Navbar bg='light' expand='lg'>
@@ -87,8 +97,17 @@ const Header = () => {
 							</LinkContainer>
 						</Nav>
 
-						<div className='m-2'>
-							<>
+						<>
+							{userInfo ? (
+								<NavDropdown title={userInfo.name} id='username'>
+									<LinkContainer to='/profile'>
+										<NavDropdown.Item>Profile</NavDropdown.Item>
+									</LinkContainer>
+									<NavDropdown.Item onClick={logoutHandler}>
+										Logout
+									</NavDropdown.Item>
+								</NavDropdown>
+							) : (
 								<Link to='/login' style={{ textDecoration: 'none' }}>
 									<Button
 										variant='primary'
@@ -97,16 +116,18 @@ const Header = () => {
 										<i className='fas fa-user'></i> Sign In
 									</Button>{' '}
 								</Link>
-								<Link to='/register' style={{ textDecoration: 'none' }}>
-									<Button
-										variant='primary'
-										className='button-color m-2'
-										size='sm'>
-										<i className='fas fa-user-plus'></i> Sign up
-									</Button>{' '}
-								</Link>
-							</>
-						</div>
+							)}
+
+							<Link to='/register' style={{ textDecoration: 'none' }}>
+								<Button
+									variant='primary'
+									className='button-color m-2'
+									size='sm'>
+									<i className='fas fa-user-plus'></i> Sign up
+								</Button>{' '}
+							</Link>
+						</>
+
 						<Form inline>
 							<div className='form-group has-search  '>
 								<span className='fa fa-search form-control-feedback'></span>
