@@ -108,24 +108,26 @@ const Header = () => {
 									</NavDropdown.Item>
 								</NavDropdown>
 							) : (
-								<Link to='/login' style={{ textDecoration: 'none' }}>
-									<Button
-										variant='primary'
-										className='button-color m-2'
-										size='sm'>
-										<i className='fas fa-user'></i> Sign In
-									</Button>{' '}
-								</Link>
-							)}
+								<>
+									<Link to='/login' style={{ textDecoration: 'none' }}>
+										<Button
+											variant='primary'
+											className='button-color m-2'
+											size='sm'>
+											<i className='fas fa-user'></i> Sign In
+										</Button>{' '}
+									</Link>
 
-							<Link to='/register' style={{ textDecoration: 'none' }}>
-								<Button
-									variant='primary'
-									className='button-color m-2'
-									size='sm'>
-									<i className='fas fa-user-plus'></i> Sign up
-								</Button>{' '}
-							</Link>
+									<Link to='/register' style={{ textDecoration: 'none' }}>
+										<Button
+											variant='primary'
+											className='button-color m-2'
+											size='sm'>
+											<i className='fas fa-user-plus'></i> Sign up
+										</Button>{' '}
+									</Link>
+								</>
+							)}
 						</>
 
 						<Form inline>
