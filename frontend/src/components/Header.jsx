@@ -96,40 +96,8 @@ const Header = () => {
 								<Nav.Link>Contact</Nav.Link>
 							</LinkContainer>
 						</Nav>
-
-						<>
-							{userInfo ? (
-								<NavDropdown title={userInfo.name} id='username'>
-									<LinkContainer to='/profile'>
-										<NavDropdown.Item>Profile</NavDropdown.Item>
-									</LinkContainer>
-									<NavDropdown.Item onClick={logoutHandler}>
-										Logout
-									</NavDropdown.Item>
-								</NavDropdown>
-							) : (
-								<Link to='/login' style={{ textDecoration: 'none' }}>
-									<Button
-										variant='primary'
-										className='button-color m-2'
-										size='sm'>
-										<i className='fas fa-user'></i> Sign In
-									</Button>{' '}
-								</Link>
-							)}
-
-							<Link to='/register' style={{ textDecoration: 'none' }}>
-								<Button
-									variant='primary'
-									className='button-color m-2'
-									size='sm'>
-									<i className='fas fa-user-plus'></i> Sign up
-								</Button>{' '}
-							</Link>
-						</>
-
 						<Form inline>
-							<div className='form-group has-search  '>
+							<div className='form-group has-search m-2'>
 								<span className='fa fa-search form-control-feedback'></span>
 								<input
 									type='text'
@@ -142,6 +110,38 @@ const Header = () => {
 							Search
 						</Button> */}
 						</Form>
+						<>
+							{userInfo ? (
+								<NavDropdown title={`Hello, ${userInfo.name} `} id='username'>
+									<LinkContainer to='/profile'>
+										<NavDropdown.Item>Profile</NavDropdown.Item>
+									</LinkContainer>
+									<NavDropdown.Item onClick={logoutHandler}>
+										Logout
+									</NavDropdown.Item>
+								</NavDropdown>
+							) : (
+								<>
+									<Link to='/login' style={{ textDecoration: 'none' }}>
+										<Button
+											variant='primary'
+											className='button-color m-2'
+											size='sm'>
+											<i className='fas fa-user'></i> Sign In
+										</Button>{' '}
+									</Link>
+
+									<Link to='/register' style={{ textDecoration: 'none' }}>
+										<Button
+											variant='primary'
+											className='button-color m-2'
+											size='sm'>
+											<i className='fas fa-user-plus'></i> Sign up
+										</Button>{' '}
+									</Link>
+								</>
+							)}
+						</>
 						<LinkContainer to='/cart'>
 							<Nav.Link>
 								{' '}
