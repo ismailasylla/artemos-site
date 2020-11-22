@@ -8,6 +8,7 @@ import Products from './components/products/Products'
 import Cart from './components/screens/CartScreen'
 import LoginScreen from './components/screens/LoginScreen'
 import RegisterScreen from './components/screens/RegisterScreen'
+import ProfileScreen from './components/screens/ProfileScreen'
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 			<Header />
 			<main>
 				<Switch>
+					<Route path='/profile' component={ProfileScreen} />
 					<Route path='/register' component={RegisterScreen} />
 					<Route path='/login' component={LoginScreen} />
 					<Route path='/contact' component={Contact} />
