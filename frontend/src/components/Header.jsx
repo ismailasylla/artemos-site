@@ -96,10 +96,23 @@ const Header = () => {
 								<Nav.Link>Contact</Nav.Link>
 							</LinkContainer>
 						</Nav>
+						<Form inline>
+							<div className='form-group has-search m-2'>
+								<span className='fa fa-search form-control-feedback'></span>
+								<input
+									type='text'
+									className='form-control headerInput'
+									placeholder='Search'
+								/>
+							</div>
 
+							{/* <Button variant='outline-success' size='sm'>
+							Search
+						</Button> */}
+						</Form>
 						<>
 							{userInfo ? (
-								<NavDropdown title={userInfo.name} id='username'>
+								<NavDropdown title={`Hello, ${userInfo.name} `} id='username'>
 									<LinkContainer to='/profile'>
 										<NavDropdown.Item>Profile</NavDropdown.Item>
 									</LinkContainer>
@@ -129,21 +142,6 @@ const Header = () => {
 								</>
 							)}
 						</>
-
-						<Form inline>
-							<div className='form-group has-search  '>
-								<span className='fa fa-search form-control-feedback'></span>
-								<input
-									type='text'
-									className='form-control headerInput'
-									placeholder='Search'
-								/>
-							</div>
-
-							{/* <Button variant='outline-success' size='sm'>
-							Search
-						</Button> */}
-						</Form>
 						<LinkContainer to='/cart'>
 							<Nav.Link>
 								{' '}
