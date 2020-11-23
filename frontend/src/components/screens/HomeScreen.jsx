@@ -1,10 +1,10 @@
 import React from 'react'
-import Background1 from '../images/background_image-1.png'
-import Background2 from '../images/background_image-2.png'
-import Background3 from '../images/background_image-3.png'
-import Partners from '../components/Partners'
-import Sold from '../components/Sold'
-import Products from './products/Products'
+import Background1 from '../../images/background_image-1.png'
+import Background2 from '../../images/background_image-2.png'
+import Background3 from '../../images/background_image-3.png'
+import Partners from '../Partners'
+import Sold from '../Sold'
+import Products from '../products/Products'
 
 const Home = () => {
 	const slider1 = {

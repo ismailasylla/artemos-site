@@ -1,7 +1,7 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
-import Home from './components/Home'
+import HomeScreen from './components/screens/HomeScreen'
 import { Switch, Route } from 'react-router-dom'
 import ProductScreen from './components/products/ProductScreen'
 import Products from './components/products/Products'
@@ -11,6 +11,7 @@ import RegisterScreen from './components/screens/RegisterScreen'
 import ProfileScreen from './components/screens/ProfileScreen'
 import ShippingScreen from './components/screens/ShippingScreen'
 import PaymentScreen from './components/screens/PaymentScreen'
+import PlaceOrder from './components/screens/PlaceOrder'
 
 function App() {
 	return (
@@ -27,7 +28,8 @@ function App() {
 					<Route path='/cart/:id?' component={Cart} />
 					<Route path='/shipping' component={ShippingScreen} />
 					<Route path='/payment' component={PaymentScreen} />
-					<Route path='/' exact component={Home} />
+					<Route path='/placeorder' component={PlaceOrder} />
+					<Route path='/' exact component={HomeScreen} />
 				</Switch>
 			</main>
 			<Footer />
