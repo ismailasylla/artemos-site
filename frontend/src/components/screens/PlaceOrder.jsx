@@ -41,15 +41,14 @@ const PlaceOrder = () => {
 						<ListGroup.Item>
 							<h2>Shipping</h2>
 							<p>
-								<strong> Address</strong>
+								<strong> Address: </strong>
 								{cart.shippingAddress.address} {cart.shippingAddress.city}
 								{cart.shippingAddress.postaCode} {cart.shippingAddress.country}
 							</p>
 						</ListGroup.Item>
 						<ListGroup.Item>
 							<h2>Payment Method</h2>
-							<strong>Method: </strong>
-							{cart.paymentMethod}
+							<strong>Method:{cart.paymentMethod} </strong>
 						</ListGroup.Item>
 						<ListGroup.Item>
 							<h2>Order Items</h2>
