@@ -3,7 +3,7 @@ import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../../components/Message'
 import Loader from '../../components/Loader'
-import { getuserDetails } from '../../actions/userActions'
+import { getuserDetails, updateUserProfile } from '../../actions/userActions'
 
 const ProfileScreen = ({ location, history }) => {
 	const [name, setName] = useState('')
@@ -20,6 +20,9 @@ const ProfileScreen = ({ location, history }) => {
 	const userLogin = useSelector((state) => state.userLogin)
 	const { userInfo } = userLogin
 
+	const userUpdateProfile = useSelector((state) => state.userUpdateProfile)
+	const { success } = userUpdateProfile
+
 	useEffect(() => {
 		if (!userInfo) {
 			history.push('/login')
@@ -28,7 +31,7 @@ const ProfileScreen = ({ location, history }) => {
 				dispatch(getuserDetails('profile'))
 			} else {
 				setName(user.name)
-				setName(user.email)
+				setEmail(user.email)
 			}
 		}
 	}, [dispatch, history, userInfo, user])
@@ -39,7 +42,7 @@ const ProfileScreen = ({ location, history }) => {
 		if (password !== confirmPassword) {
 			setMessage('Passwords do not match')
 		} else {
-			//Update Profile
+			dispatch(updateUserProfile({ id: user._id, name, email, password }))
 		}
 	}
 	return (
@@ -48,6 +51,7 @@ const ProfileScreen = ({ location, history }) => {
 				<h2>User Profile</h2>
 				{message && <Message variant='danger'>{message}</Message>}
 				{error && <Message variant='danger'>{error}</Message>}
+				{success && <Message variant='success'>Profile Updated</Message>}
 				{loading && <Loader />}
 				<Form onSubmit={submitHandler}>
 					<Form.Group controlId='name'>
@@ -55,7 +59,7 @@ const ProfileScreen = ({ location, history }) => {
 						<Form.Control
 							type='name'
 							placeholder='Enter Name'
-							value={user.name}
+							value={name}
 							onChange={(e) => setName(e.target.value)}></Form.Control>
 					</Form.Group>
 					<Form.Group controlId='email'>
@@ -63,7 +67,7 @@ const ProfileScreen = ({ location, history }) => {
 						<Form.Control
 							type='email'
 							placeholder='Enter Email'
-							value={user.email}
+							value={email}
 							onChange={(e) => setEmail(e.target.value)}></Form.Control>
 					</Form.Group>
 					<Form.Group controlId='password'>
