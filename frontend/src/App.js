@@ -10,6 +10,7 @@ import LoginScreen from './components/screens/LoginScreen'
 import RegisterScreen from './components/screens/RegisterScreen'
 import ProfileScreen from './components/screens/ProfileScreen'
 import ShippingScreen from './components/screens/ShippingScreen'
+import PaymentScreen from './components/screens/PaymentScreen'
 
 function App() {
 	return (
@@ -25,6 +26,7 @@ function App() {
 					<Route path='/products' component={Products} />
 					<Route path='/cart/:id?' component={Cart} />
 					<Route path='/shipping' component={ShippingScreen} />
+					<Route path='/payment' component={PaymentScreen} />
 					<Route path='/' exact component={Home} />
 				</Switch>
 			</main>
