@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
+import Logo from '../images/logo/logo.png'
 
 const Footer = () => {
 	return (
@@ -198,8 +199,8 @@ const Footer = () => {
 			</div>
 
 			<div className=' container-fluid footer-bottom'>
-				<h1 style={{ float: 'left' }} className='ml-5 mt-3'>
-					Artemos
+				<h1 style={{ float: 'left' }} className='ml-5 mt-3 logo'>
+					<img src={Logo} alt='' style={{ width: '144px' }} />
 				</h1>
 				<div className='container'>
 					<p className='text-center mt-3'>
