@@ -96,11 +96,11 @@ const Partners = () => {
 			<div
 				class='gallery js-flickity'
 				data-flickity-options='{ "wrapAround": true }'>
-				<div class='gallery-cell'></div>
-				<div class='gallery-cell'></div>
-				<div class='gallery-cell'></div>
-				<div class='gallery-cell'></div>
-				<div class='gallery-cell'></div>
+				<div className='gallery-cell'></div>
+				<div className='gallery-cell'></div>
+				<div className='gallery-cell'></div>
+				<div className='gallery-cell'></div>
+				<div className='gallery-cell'></div>
 			</div>
 		</div>
 	)
