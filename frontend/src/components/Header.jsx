@@ -53,40 +53,15 @@ const Header = () => {
 
 							<Nav.Link href='#link'>Sell</Nav.Link>
 							<NavDropdown title='Services' id='basic-nav-dropdown'>
-								<NavDropdown.Item href='#action/3.1'>
-									Art Registrar
-								</NavDropdown.Item>
+								<NavDropdown.Item href='#action/3.1'>Fine Art</NavDropdown.Item>
 								<NavDropdown.Item href='#action/3.2'>
-									Archiving
+									Collectible
 								</NavDropdown.Item>
 
-								<NavDropdown.Item href='#action/3.3'>
-									Art Tokenization
-								</NavDropdown.Item>
+								<NavDropdown.Item href='#action/3.3'>Wealth</NavDropdown.Item>
 								<NavDropdown.Divider />
 								<NavDropdown.Item href='#action/3.3'>
-									Custody & Escrow
-								</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.3'>
-									Provenance
-								</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.3'>
-									Logisticsion
-								</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.3'>Finance</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href='#action/3.3'>
-									Client Advisory
-								</NavDropdown.Item>
-
-								<NavDropdown.Item href='#action/3.4'>
-									Collection Management
-								</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.4'>
-									Appraisals & Valuations
-								</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.4'>
-									Museum Services
+									Tokenization
 								</NavDropdown.Item>
 							</NavDropdown>
 							{/* <LinkContainer to='/about' style={{ textDecoration: 'none' }}>

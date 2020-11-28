@@ -32,7 +32,7 @@ const RegisterScreen = ({ location, history }) => {
 		e.preventDefault()
 
 		if (password !== confirmPassword) {
-			setMessage('passwords do not much')
+			setMessage('Passwords do not match')
 		} else {
 			dispatch(register(name, email, password))
 		}
