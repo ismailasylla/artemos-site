@@ -131,7 +131,11 @@ const ProfileScreen = ({ location, history }) => {
 									<td>{order.totalPrice}</td>
 									<td>
 										{order.isPaid ? (
-											order.paidAt.substring(0, 10)
+											<i className='fas fa-check' style={{ color: 'green' }}>
+												<span className='m-1'>
+													{order.paidAt.substring(0, 10)}
+												</span>
+											</i>
 										) : (
 											<i className='fas fa-times' style={{ color: 'red' }}></i>
 										)}
@@ -144,11 +148,13 @@ const ProfileScreen = ({ location, history }) => {
 										)}
 									</td>
 									<td>
-										<LinkContainer to={`/order/${order._id}`}>
-											<Button className='btn-sm' variant='light'>
-												Details
-											</Button>
-										</LinkContainer>
+										<>
+											<LinkContainer to={`/order/${order._id}`}>
+												<Button className='btn-sm' variant='light'>
+													Details
+												</Button>
+											</LinkContainer>
+										</>
 									</td>
 								</tr>
 							))}

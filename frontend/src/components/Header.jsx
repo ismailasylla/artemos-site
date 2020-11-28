@@ -1,6 +1,5 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-
 import {
 	Navbar,
 	Nav,
@@ -18,6 +17,10 @@ const Header = () => {
 	const dispatch = useDispatch()
 	const userLogin = useSelector((state) => state.userLogin)
 	const { userInfo } = userLogin
+
+	const cart = useSelector((state) => state.cart)
+
+	const { cartItems } = cart
 
 	const logoutHandler = () => {
 		dispatch(logout())
@@ -120,7 +123,11 @@ const Header = () => {
 						<LinkContainer to='/cart'>
 							<Nav.Link>
 								{' '}
-								<i className='fab fa-opencart fa-2x'>Cart</i>
+								<span className='badge badge-pill badge-danger larger-badge '>
+									{cartItems.reduce((acc, item) => acc + item.qty, 0)}{' '}
+								</span>
+								<i className='fab fa-opencart fa-2x'></i>
+								Cart
 							</Nav.Link>
 						</LinkContainer>
 					</Navbar.Collapse>

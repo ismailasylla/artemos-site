@@ -88,7 +88,7 @@ const RegisterScreen = ({ location, history }) => {
 				<Col>
 					Already have an account?{' '}
 					<Link to={redirect ? `/login?redirect=${redirect}` : `/login`}>
-						Login{' '}
+						<strong style={{ color: '#145059' }}>Login</strong>{' '}
 					</Link>
 				</Col>
 			</Row>

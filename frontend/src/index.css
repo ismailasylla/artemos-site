@@ -713,3 +713,6 @@ body {
 	height: 700px;
 	/* width: 800vh; */
 }
+.larger-badge {
+	font-size: 1.2em;
+}
