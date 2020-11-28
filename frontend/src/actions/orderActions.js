@@ -16,7 +16,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
 		})
 
 		const {
-			userLogin: { userInfo }, 
+			userLogin: { userInfo },
 		} = getState()
 		const config = {
 			headers: {
