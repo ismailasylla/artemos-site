@@ -10,8 +10,8 @@ import { getOrderDetails, payOrder } from '../../actions/orderActions'
 import {
 	ORDER_PAY_RESET,
 	// ORDER_DELIVER_RESET,
-} from '../../constants/orderConstant'
-// import { USER_DETAILS_RESET } from '../../constants/userConstants'
+} from '../../constants/orderConstants'
+// import { USER_DETAILS_RESET } from '../../constants/userConstantss'
 
 const OrderScreen = ({ match }) => {
 	const orderId = match.params.id

@@ -14,7 +14,7 @@ import {
 	ORDER_LIST_MY_SUCCESS,
 	ORDER_LIST_MY_FAIL,
 	ORDER_LIST_MY_RESET,
-} from '../constants/orderConstant'
+} from '../constants/orderConstants'
 import { logout } from './userActions'
 
 export const createOrder = (order) => async (dispatch, getState) => {

@@ -51,5 +51,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js"
       integrity="sha512-Nx/M3T/fWprNarYOrnl+gfWZ25YlZtSNmhjHeC0+2gCtyAdDFXqaORJBj1dC427zt3z/HwkUpPX+cxzonjUgrA=="
       crossorigin="anonymous"></script>
+<script>
+  ///////////////// fixed menu on scroll for desktop
+    if ($(window).width() > 992) {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 40) {
+          $('#navbar_top').addClass("fixed-top");
+          // add padding top to show content behind navbar
+          $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+        } else {
+          $('#navbar_top').removeClass("fixed-top");
+          // remove padding top from body
+          $('body').css('padding-top', '0');
+        }
+      });
+    } // end if
+</script>
+<!-- Start of artemos Zendesk Widget script -->
+<script id="ze-snippet"
+  src="https://static.zdassets.com/ekr/snippet.js?key=dd6045cd-38cc-45f5-80bb-79d789cf25f7"> </script>
+<!-- End of artemos Zendesk Widget script -->
   </body>
 </html>

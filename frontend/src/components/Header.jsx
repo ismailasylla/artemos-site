@@ -27,7 +27,7 @@ const Header = () => {
 	}
 	return (
 		<header>
-			<Navbar bg='light' expand='lg'>
+			<Navbar bg='light' expand='lg' id='navbar_top'>
 				<Container>
 					<LinkContainer to='/' style={{ textDecoration: 'none' }}>
 						<Navbar.Brand className='logo '>
@@ -120,6 +120,19 @@ const Header = () => {
 								</>
 							)}
 						</>
+						{userInfo && userInfo.isAdmin && (
+							<NavDropdown title='Admin' id='adminmenu'>
+								<LinkContainer to='/admin/userlist'>
+									<NavDropdown.Item>Users</NavDropdown.Item>
+								</LinkContainer>
+								<LinkContainer to='/admin/productlist'>
+									<NavDropdown.Item>Products</NavDropdown.Item>
+								</LinkContainer>
+								<LinkContainer to='/admin/orderlist'>
+									<NavDropdown.Item>Orders</NavDropdown.Item>
+								</LinkContainer>
+							</NavDropdown>
+						)}
 						<LinkContainer to='/cart'>
 							<Nav.Link>
 								{' '}
