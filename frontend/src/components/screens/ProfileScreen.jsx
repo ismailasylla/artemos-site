@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 import Message from '../../components/Message'
 import Loader from '../../components/Loader'
 import { listMyOrders } from '../../actions/orderActions'
-import { getuserDetails, updateUserProfile } from '../../actions/userActions'
+import { getUserDetails, updateUserProfile } from '../../actions/userActions'
 import { USER_UPDATE_PROFILE_RESET } from '../../constants/userConstants'
 
 const ProfileScreen = ({ location, history }) => {
@@ -35,7 +35,7 @@ const ProfileScreen = ({ location, history }) => {
 		} else {
 			if (!user.name) {
 				dispatch({ type: USER_UPDATE_PROFILE_RESET })
-				dispatch(getuserDetails('profile'))
+				dispatch(getUserDetails('profile'))
 				dispatch(listMyOrders())
 			} else {
 				setName(user.name)
