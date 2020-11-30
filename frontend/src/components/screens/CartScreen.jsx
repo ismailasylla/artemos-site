@@ -111,7 +111,7 @@ const CartScreen = ({ match, location, history }) => {
 							<ListGroup.Item>
 								<h2>
 									Subtotal{''}
-									<span className='badge badge-pill badge-danger larger-badge m-1'>
+									<span className='badge badge-pill badge-danger m-1'>
 										{cartItems.reduce((acc, item) => acc + item.qty, 0)}{' '}
 									</span>
 									items
