@@ -63,12 +63,14 @@ const Header = () => {
 
 								<NavDropdown.Item href='#action/3.3'>Wealth</NavDropdown.Item>
 								<NavDropdown.Divider />
-								<NavDropdown.Item href='#action/3.3'>
-									Tokenization
-								</NavDropdown.Item>
+								<LinkContainer to='/tokenize'>
+									<NavDropdown.Item href='#action/3.3'>
+										Tokenization
+									</NavDropdown.Item>
+								</LinkContainer>
 							</NavDropdown>
-							{/* <LinkContainer to='/about' style={{ textDecoration: 'none' }}>
-								<Nav.Link>About Us</Nav.Link>
+							{/* <LinkContainer to='/tokenize' style={{ textDecoration: 'none' }}>
+								<Nav.Link>Tokenization</Nav.Link>
 							</LinkContainer> */}
 							<LinkContainer to='/contact' style={{ textDecoration: 'none' }}>
 								<Nav.Link>Contact</Nav.Link>

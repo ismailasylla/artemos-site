@@ -3,9 +3,11 @@ import Footer from './components/Footer'
 import Contact from './components/Contact'
 import HomeScreen from './components/screens/HomeScreen'
 import { Switch, Route } from 'react-router-dom'
-import ProductScreen from './components/products/ProductScreen'
+
 import Products from './components/products/Products'
 import Cart from './components/screens/CartScreen'
+import Tokenize from './components/blockchain/Tokenize'
+import ProductScreen from './components/products/ProductScreen'
 import LoginScreen from './components/screens/LoginScreen'
 import RegisterScreen from './components/screens/RegisterScreen'
 import ProfileScreen from './components/screens/ProfileScreen'
@@ -35,6 +37,7 @@ function App() {
 					<Route path='/order/:id' component={OrderScreen} />
 					<Route path='/admin/userlist' component={UserListScreen} />
 					<Route path='/admin/user/:id/edit' component={UserEditScreen} />
+					<Route path='/tokenize' component={Tokenize} />
 					<Route path='/' exact component={HomeScreen} />
 				</Switch>
 			</main>

@@ -127,7 +127,7 @@ const CartScreen = ({ match, location, history }) => {
 									type='button'
 									className='btn-block button-color my-3'
 									disabled={cartItems.length === 0}>
-									<i className='fas fa-money-check'></i> Proceed To Checkout
+									<i className='fas fa-credit-card'></i> Proceed To Checkout
 								</Button>
 							</ListGroupItem>
 						</ListGroup>
