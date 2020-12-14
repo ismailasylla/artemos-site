@@ -10,6 +10,7 @@ const Loader = () => {
 	return (
 		<Container className='py-5'>
 			<Spinner
+				className='spinnerColor'
 				animation='border'
 				variant='info'
 				role='status'
