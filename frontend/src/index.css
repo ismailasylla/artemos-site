@@ -716,3 +716,7 @@ body {
 .larger-badge {
 	font-size: 1.2em;
 }
+
+.spinnerColor {
+	color: #145059 !important;
+}
