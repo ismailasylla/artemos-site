@@ -48,15 +48,15 @@ const UserEditScreen = ({ match, history }) => {
 	}
 
 	return (
-		<div className='container  m-5'>
-			<Link
-				to='/admin/userlist'
-				className='btn btn-primary my-3 button-color'
-				size='sm'>
-				<i className='fas fa-arrow-left'></i> Go Back
-			</Link>
-
+		<div className='container m-2'>
 			<FormContainer>
+			
+				<Link to='/admin/userlist'>
+					<Button variant='primary' className='button-color my-3' size='sm'>
+						<i className='fas fa-arrow-left'></i> Back
+					</Button>{' '}
+				</Link>
+
 				<h1>Edit User</h1>
 				{loadingUpdate && <Loader />}
 				{errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
