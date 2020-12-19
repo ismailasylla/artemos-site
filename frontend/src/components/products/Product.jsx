@@ -32,9 +32,9 @@ const Product = ({ product }) => {
 						$ {product.price}{' '}
 					</Card.Text>
 				</Card.Body>
-				<Button variant='primary' className='button-color m-2' size='sm'>
+				{/* <Button variant='primary' className='button-color m-2' size='sm'>
 					Add to cart <i className='fab fa-opencart'></i>
-				</Button>{' '}
+				</Button>{' '} */}
 			</Card>
 		</>
 	)
