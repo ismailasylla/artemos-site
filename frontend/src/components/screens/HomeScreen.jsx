@@ -6,7 +6,8 @@ import Partners from '../Partners'
 import Sold from '../Sold'
 import Products from '../products/Products'
 
-const Home = () => {
+const Home = ({ match }) => {
+	const keyword = match.params.keyword
 	const slider1 = {
 		backgroundSize: 'cover',
 
@@ -147,7 +148,7 @@ const Home = () => {
 					</a>
 				</div>
 			</div>
-			<Products />
+			<Products keyword={keyword} />
 			{/* <FeaturedItems /> */}
 			<Sold />
 			<Partners />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import {
 	Navbar,
@@ -12,6 +13,7 @@ import { logout } from '../actions/userActions'
 import { Link } from 'react-router-dom'
 import { LinkContainer } from 'react-router-bootstrap'
 import Logo from '../images/logo/logo.png'
+import SearchBox from '../components/SearchBox'
 
 const Header = () => {
 	const dispatch = useDispatch()
@@ -70,24 +72,12 @@ const Header = () => {
 							{/* <LinkContainer to='/about' style={{ textDecoration: 'none' }}>
 								<Nav.Link>About Us</Nav.Link>
 							</LinkContainer> */}
-							<LinkContainer to='/contact' style={{ textDecoration: 'none' }}>
+							{/* <LinkContainer to='/contact' style={{ textDecoration: 'none' }}>
 								<Nav.Link>Contact</Nav.Link>
-							</LinkContainer>
+							</LinkContainer> */}
 						</Nav>
-						<Form inline>
-							<div className='form-group has-search m-2'>
-								<span className='fa fa-search form-control-feedback'></span>
-								<input
-									type='text'
-									className='form-control headerInput'
-									placeholder='Search'
-								/>
-							</div>
 
-							{/* <Button variant='outline-success' size='sm'>
-							Search
-						</Button> */}
-						</Form>
+						<Route render={({ history }) => <SearchBox history={history} />} />
 						<>
 							{userInfo ? (
 								<NavDropdown title={`Hello, ${userInfo.name} `} id='username'>

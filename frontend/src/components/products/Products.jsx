@@ -7,15 +7,15 @@ import Message from '../Message'
 import Loader from '../Loader'
 import FeaturedFooter from '../FeaturedFooter'
 
-const Products = () => {
+const Products = ({ keyword }) => {
 	const dispatch = useDispatch()
 
 	const productList = useSelector((state) => state.productList)
 	const { loading, error, products } = productList
 
 	useEffect(() => {
-		dispatch(listProducts())
-	}, [dispatch])
+		dispatch(listProducts(keyword))
+	}, [dispatch, keyword])
 
 	return (
 		<div>
