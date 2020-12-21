@@ -5,7 +5,6 @@ import Product from './Product'
 import { listProducts } from '../../actions/productActions'
 import Message from '../Message'
 import Loader from '../Loader'
-import FeaturedFooter from '../FeaturedFooter'
 
 const Products = ({ keyword }) => {
 	const dispatch = useDispatch()
@@ -19,16 +18,6 @@ const Products = ({ keyword }) => {
 
 	return (
 		<div>
-			<Row>
-				<Col className='text-center py-5 '>
-					<h1 className='featuredItems'>Featured Products</h1>
-					<div className='container d-flex justify-content-center'>
-						<hr className='black-line' />
-						<hr className='red-line' />
-						<hr className='green-line' />
-					</div>
-				</Col>
-			</Row>
 			{loading ? (
 				<Loader />
 			) : error ? (
@@ -44,8 +33,6 @@ const Products = ({ keyword }) => {
 					</Row>
 				</Container>
 			)}
-
-			<FeaturedFooter />
 		</div>
 	)
 }
