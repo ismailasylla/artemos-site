@@ -56,6 +56,12 @@ const ProfileScreen = ({ location, history }) => {
 	return (
 		<Row className='container  m-5'>
 			<Col md={3}>
+				<img
+					src='https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg'
+					alt=''
+					className='rounded-circle mb-2'
+					style={{ width: '200px' }}
+				/>
 				<h2>User Profile</h2>
 				{message && <Message variant='danger'>{message}</Message>}
 				{error && <Message variant='danger'>{error}</Message>}
