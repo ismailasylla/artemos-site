@@ -8,6 +8,7 @@ import {
 	Form,
 	NavDropdown,
 	Button,
+	Image,
 } from 'react-bootstrap'
 import { logout } from '../actions/userActions'
 import { Link } from 'react-router-dom'
@@ -30,56 +31,58 @@ const Header = () => {
 	return (
 		<header>
 			<Navbar bg='light' expand='lg' id='navbar_top'>
-				<Container>
-					<LinkContainer to='/' style={{ textDecoration: 'none' }}>
-						<Navbar.Brand className='logo '>
-							<img src={Logo} alt='' style={{ width: '144px' }} />
-						</Navbar.Brand>
-					</LinkContainer>
-					<Navbar.Toggle aria-controls='basic-navbar-nav' />
-					<Navbar.Collapse id='basic-navbar-nav'>
-						<Nav className='ml-auto'>
-							<NavDropdown title='Buy' id='basic-nav-dropdown'>
-								<LinkContainer
-									to='/products'
-									style={{ textDecoration: 'none' }}>
-									<NavDropdown.Item>Arts</NavDropdown.Item>
-								</LinkContainer>
+				<LinkContainer to='/' style={{ textDecoration: 'none' }}>
+					<Navbar.Brand className='logo '>
+						<img src={Logo} alt='' style={{ width: '144px' }} />
+					</Navbar.Brand>
+				</LinkContainer>
+				<Navbar.Toggle aria-controls='basic-navbar-nav' />
+				<Navbar.Collapse id='basic-navbar-nav'>
+					<Nav className='ml-auto'>
+						<NavDropdown title='Buy' id='basic-nav-dropdown'>
+							<LinkContainer to='/products' style={{ textDecoration: 'none' }}>
+								<NavDropdown.Item>Arts</NavDropdown.Item>
+							</LinkContainer>
 
-								<NavDropdown.Item href='/Watches'>Watches</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.3'>
-									Something
-								</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href='#action/3.4'>
-									Separated link
-								</NavDropdown.Item>
-							</NavDropdown>
+							<NavDropdown.Item href='/Watches'>Watches</NavDropdown.Item>
+							<NavDropdown.Item href='#action/3.3'>Something</NavDropdown.Item>
+							<NavDropdown.Divider />
+							<NavDropdown.Item href='#action/3.4'>
+								Separated link
+							</NavDropdown.Item>
+						</NavDropdown>
 
-							<Nav.Link href='#link'>Sell</Nav.Link>
-							<NavDropdown title='Services' id='basic-nav-dropdown'>
-								<NavDropdown.Item href='#action/3.1'>Fine Art</NavDropdown.Item>
-								<NavDropdown.Item href='#action/3.2'>
-									Collectible
-								</NavDropdown.Item>
+						<Nav.Link href='#link'>Sell</Nav.Link>
+						<NavDropdown title='Services' id='basic-nav-dropdown'>
+							<NavDropdown.Item href='#action/3.1'>Fine Art</NavDropdown.Item>
+							<NavDropdown.Item href='#action/3.2'>
+								Collectible
+							</NavDropdown.Item>
 
-								<NavDropdown.Item href='#action/3.3'>Wealth</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href='#action/3.3'>
-									Tokenization
-								</NavDropdown.Item>
-							</NavDropdown>
-							{/* <LinkContainer to='/about' style={{ textDecoration: 'none' }}>
-								<Nav.Link>About Us</Nav.Link>
-							</LinkContainer> */}
-							{/* <LinkContainer to='/contact' style={{ textDecoration: 'none' }}>
-								<Nav.Link>Contact</Nav.Link>
-							</LinkContainer> */}
-						</Nav>
+							<NavDropdown.Item href='#action/3.3'>Wealth</NavDropdown.Item>
+							<NavDropdown.Divider />
+							<NavDropdown.Item href='#action/3.3'>
+								Tokenization
+							</NavDropdown.Item>
+						</NavDropdown>
+						{/* <LinkContainer to='/about' style={{ textDecoration: 'none' }}>
+							<Nav.Link>About Us</Nav.Link>
+						</LinkContainer> */}
+						<LinkContainer to='/contact' style={{ textDecoration: 'none' }}>
+							<Nav.Link>Contact</Nav.Link>
+						</LinkContainer>
+					</Nav>
 
-						<Route render={({ history }) => <SearchBox history={history} />} />
-						<>
-							{userInfo ? (
+					<Route render={({ history }) => <SearchBox history={history} />} />
+					<>
+						{userInfo ? (
+							<>
+								<img
+									src='https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg'
+									alt=''
+									className='rounded-circle ml-1'
+									style={{ width: '40px' }}
+								/>
 								<NavDropdown title={`Hello, ${userInfo.name} `} id='username'>
 									<LinkContainer to='/profile'>
 										<NavDropdown.Item>Profile</NavDropdown.Item>
@@ -88,30 +91,42 @@ const Header = () => {
 										Logout
 									</NavDropdown.Item>
 								</NavDropdown>
-							) : (
-								<>
-									<Link to='/login' style={{ textDecoration: 'none' }}>
-										<Button
-											variant='primary'
-											className='button-color m-2'
-											size='sm'>
-											<i className='fas fa-user'></i> Sign In
-										</Button>{' '}
-									</Link>
+							</>
+						) : (
+							<>
+								<Link to='/login' style={{ textDecoration: 'none' }}>
+									<Button
+										variant='primary'
+										className='button-color m-2'
+										size='sm'>
+										<i className='fas fa-user'></i> Sign In
+									</Button>{' '}
+								</Link>
 
-									<Link to='/register' style={{ textDecoration: 'none' }}>
-										<Button
-											variant='primary'
-											className='button-color m-2'
-											size='sm'>
-											<i className='fas fa-user-plus'></i> Sign up
-										</Button>{' '}
-									</Link>
-								</>
-							)}
-						</>
-						{userInfo && userInfo.isAdmin && (
+								<Link to='/register' style={{ textDecoration: 'none' }}>
+									<Button
+										variant='primary'
+										className='button-color m-2'
+										size='sm'>
+										<i className='fas fa-user-plus'></i> Sign up
+									</Button>{' '}
+								</Link>
+							</>
+						)}
+					</>
+					{userInfo && userInfo.isAdmin && (
+						<>
+							<img
+								src='https://icon-library.com/images/art-icon-png/art-icon-png-9.jpg'
+								alt=''
+								className='rounded-circle'
+								style={{ width: '40px' }}
+							/>
 							<NavDropdown title='Admin' id='adminmenu'>
+								<LinkContainer to='/profile'>
+									<NavDropdown.Item>Profile</NavDropdown.Item>
+								</LinkContainer>
+
 								<LinkContainer to='/admin/userlist'>
 									<NavDropdown.Item>Users</NavDropdown.Item>
 								</LinkContainer>
@@ -121,20 +136,23 @@ const Header = () => {
 								<LinkContainer to='/admin/orderlist'>
 									<NavDropdown.Item>Orders</NavDropdown.Item>
 								</LinkContainer>
+								<NavDropdown.Item onClick={logoutHandler}>
+									Logout
+								</NavDropdown.Item>
 							</NavDropdown>
-						)}
-						<LinkContainer to='/cart'>
-							<Nav.Link>
-								{' '}
-								<span className='badge badge-pill badge-danger larger-badge '>
-									{cartItems.reduce((acc, item) => acc + item.qty, 0)}{' '}
-								</span>
-								<i className='fab fa-opencart fa-2x'></i>
-								Cart
-							</Nav.Link>
-						</LinkContainer>
-					</Navbar.Collapse>
-				</Container>
+						</>
+					)}
+					<LinkContainer to='/cart' className='mr-5'>
+						<Nav.Link>
+							{' '}
+							<span className='badge badge-pill badge-danger larger-badge mr-2'>
+								{cartItems.reduce((acc, item) => acc + item.qty, 0)}{' '}
+							</span>
+							<i className='fab fa-opencart fa-2x'></i>
+							Cart
+						</Nav.Link>
+					</LinkContainer>
+				</Navbar.Collapse>
 			</Navbar>
 		</header>
 	)

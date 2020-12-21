@@ -141,6 +141,7 @@ h5 {
 	font-size: 0.765625rem;
 	text-transform: capitalize !important;
 	font-weight: 600;
+	padding: 7px !important;
 }
 
 .cardimage {
