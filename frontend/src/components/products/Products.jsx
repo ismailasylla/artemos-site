@@ -5,7 +5,6 @@ import Product from './Product'
 import { listProducts } from '../../actions/productActions'
 import Message from '../Message'
 import Loader from '../Loader'
-import FeaturedFooter from '../FeaturedFooter'
 
 const Products = ({ keyword }) => {
 	const dispatch = useDispatch()
@@ -34,8 +33,6 @@ const Products = ({ keyword }) => {
 					</Row>
 				</Container>
 			)}
-
-			{/* <FeaturedFooter />/ */}
 		</div>
 	)
 }
