@@ -4560,7 +4560,7 @@ input[type='submit'].btn-block {
 	z-index: 2;
 	color: #000;
 	text-decoration: none;
-	background-color: #f7f7f9;
+	background-color: #145059;
 	border-color: transparent;
 }
 .page-link:focus {
@@ -4574,7 +4574,7 @@ input[type='submit'].btn-block {
 .page-item.active .page-link {
 	z-index: 3;
 	color: #fff;
-	background-color: #1a1a1a;
+	background-color: #145059;
 	border-color: #1a1a1a;
 }
 .page-item.disabled .page-link {

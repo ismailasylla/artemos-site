@@ -5,16 +5,17 @@ import Product from './Product'
 import { listProducts } from '../../actions/productActions'
 import Message from '../Message'
 import Loader from '../Loader'
+import Paginate from '../../components/Paginate'
 
-const Products = ({ keyword }) => {
+const Products = ({ keyword, pageNumber }) => {
 	const dispatch = useDispatch()
 
 	const productList = useSelector((state) => state.productList)
-	const { loading, error, products } = productList
+	const { loading, error, products, page, pages } = productList
 
 	useEffect(() => {
 		dispatch(listProducts(keyword))
-	}, [dispatch, keyword])
+	}, [dispatch, keyword, pageNumber])
 
 	return (
 		<div>
@@ -31,6 +32,11 @@ const Products = ({ keyword }) => {
 							</Col>
 						))}
 					</Row>
+					<Paginate
+						pages={pages}
+						page={page}
+						keyword={keyword ? keyword : ''}
+					/>
 				</Container>
 			)}
 		</div>

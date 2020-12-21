@@ -7,8 +7,10 @@ import Partners from '../Partners'
 import Sold from '../Sold'
 import Products from '../products/Products'
 
-const Home = ({ match }) => {
+const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword
+	const pageNumber = match.params.pageNumber || 1
+
 	const slider1 = {
 		backgroundSize: 'cover',
 
@@ -77,7 +79,8 @@ const Home = ({ match }) => {
 					</div>
 				</Col>
 			</Row>
-			<Products keyword={keyword} />
+			<Products keyword={keyword} pageNumber={pageNumber} />
+
 			{/* <FeaturedItems /> */}
 			<Sold />
 			<Partners />
@@ -85,4 +88,4 @@ const Home = ({ match }) => {
 	)
 }
 
-export default Home
+export default HomeScreen

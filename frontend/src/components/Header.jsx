@@ -148,8 +148,8 @@ const Header = () => {
 							<span className='badge badge-pill badge-danger larger-badge mr-2'>
 								{cartItems.reduce((acc, item) => acc + item.qty, 0)}{' '}
 							</span>
-							{/* <i className='fab fa-opencart fa-2x'></i> */}
-							Cart <i className='fas fa-cart-arrow-down fa-2x'></i>
+							<i className='fab fa-opencart fa-2x'></i>
+							Cart
 						</Nav.Link>
 					</LinkContainer>
 				</Navbar.Collapse>
