@@ -796,7 +796,7 @@ body {
 	padding: 70px 50px;
 	z-index: 1;
 	width: 100%;
-	background: linear-gradient(80deg, #0030cc 0%, #00a4db 100%);
+	background: linear-gradient(80deg, #232f55 0%, #007eff 100%);
 	position: absolute;
 	top: 50px;
 }
@@ -869,4 +869,18 @@ h3,
 	background: linear-gradient(45deg, #00a8f4 0%, #02d1a1 100%);
 	z-index: -1;
 	transition: ease 0.3s;
+}
+
+#tokenize-section-2-h2 {
+	color: #212c51;
+	font-family: 'Montserrat', Sans-serif;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+	font-size: 2rem;
+}
+
+.tokenize-bg {
+	background: linear-gradient(45deg, #f4faff 0%, #2362c1 100%);
 }

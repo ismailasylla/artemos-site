@@ -20,6 +20,7 @@ import ProductEditScreen from './components/screens/ProductEditScreen'
 import OrderListScreen from './components/screens/OrderListScreen'
 import SearchScreen from './components/screens/SearchScreen'
 import About from './components/screens/About'
+import Tokenize from './components/blockchain/Tokenize'
 
 function App() {
 	return (
@@ -32,9 +33,10 @@ function App() {
 					<Route path='/login' component={LoginScreen} />
 					<Route path='/contact' component={Contact} />
 					<Route path='/about' component={About} />
-					<Route path='/product/:id' component={ProductScreen} />
+					<Route path='/tokenize' component={Tokenize} />
+					<Route path='/product/:id' component={ProductScreen} exact />
 					<Route path='/products' component={Products} />
-					<Route path='/cart/:id?' component={Cart} />
+					<Route path='/cart/:id?' component={Cart} exact />
 					<Route path='/shipping' component={ShippingScreen} />
 					<Route path='/payment' component={PaymentScreen} />
 					<Route path='/placeorder' component={PlaceOrderScreen} />

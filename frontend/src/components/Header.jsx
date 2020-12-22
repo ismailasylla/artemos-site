@@ -61,13 +61,15 @@ const Header = () => {
 
 							<NavDropdown.Item href='#action/3.3'>Wealth</NavDropdown.Item>
 							<NavDropdown.Divider />
-							<NavDropdown.Item href='#action/3.3'>
-								Tokenization
-							</NavDropdown.Item>
+							<LinkContainer to='/tokenize' style={{ textDecoration: 'none' }}>
+								<NavDropdown.Item>Tokenize</NavDropdown.Item>
+							</LinkContainer>
 						</NavDropdown>
 						<NavDropdown title='More' id='basic-nav-dropdown'>
 							<LinkContainer to='/about' style={{ textDecoration: 'none' }}>
-								<NavDropdown.Item href='#action/3.1'>About</NavDropdown.Item>
+								<NavDropdown.Item href='#action/3.1'>
+									Who We Are{' '}
+								</NavDropdown.Item>
 							</LinkContainer>
 							<LinkContainer to='/contact' style={{ textDecoration: 'none' }}>
 								<NavDropdown.Item href='#action/3.2'>Contact</NavDropdown.Item>
