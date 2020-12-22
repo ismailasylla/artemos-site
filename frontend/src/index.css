@@ -884,3 +884,15 @@ h3,
 .tokenize-bg {
 	background: linear-gradient(45deg, #f4faff 0%, #2362c1 100%);
 }
+
+#terms li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+	float: left;
+}
+
+.loginRegister-bg {
+	background: linear-gradient(45deg, #ffffff 0%, #003b44 100%);
+	border-radius: 20px;
+}

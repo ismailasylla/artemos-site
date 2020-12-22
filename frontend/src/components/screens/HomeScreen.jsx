@@ -6,6 +6,7 @@ import { Row, Col } from 'react-bootstrap'
 import Partners from '../Partners'
 import Sold from '../Sold'
 import Products from '../products/Products'
+import NewsLetter from '../NewsLetter'
 
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword
@@ -70,7 +71,7 @@ const HomeScreen = ({ match }) => {
 				</div>
 			</div>
 			<Row>
-				<Col className='text-center py-5 '>
+				<Col className='text-center py-5 tokenize-bg'>
 					<h1 className='featuredItems'>Arts</h1>
 					<div className='container d-flex justify-content-center'>
 						<hr className='black-line' />
@@ -82,7 +83,8 @@ const HomeScreen = ({ match }) => {
 			<Products keyword={keyword} pageNumber={pageNumber} />
 
 			{/* <FeaturedItems /> */}
-			<Sold />
+			{/* <Sold /> */}
+			<NewsLetter />
 			<Partners />
 		</>
 	)
