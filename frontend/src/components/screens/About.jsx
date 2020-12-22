@@ -1,5 +1,6 @@
 import React from 'react'
 import Signature from '../Signature'
+import { Button } from 'react-bootstrap'
 
 const About = () => {
 	const Font = {
@@ -53,7 +54,7 @@ const About = () => {
 			</section>
 			<section
 				className='container-fluid section-3 '
-				style={{ marginBottom: '500px' }}>
+				style={{ marginBottom: '0px' }}>
 				<>
 					<div className='row' style={{ padding: '50px' }}>
 						<div className='col-sm'>
@@ -93,6 +94,19 @@ const About = () => {
 						</div>
 					</div>
 				</>
+			</section>
+			<section className='tokenize-bg'>
+				<div className='container  d-flex justify-content-center p-5'>
+					<a href='https://meetings.hubspot.com/hello2226'>
+						<Button
+							type='submit'
+							variant='primary'
+							className='button-color m-2 '>
+							BOOK A FREE CONSULTATION{' '}
+							<i className='fas fa-angle-double-right ml-2'></i>
+						</Button>{' '}
+					</a>
+				</div>
 			</section>
 		</>
 	)
