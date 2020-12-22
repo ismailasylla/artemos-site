@@ -4,7 +4,7 @@ import Background2 from '../../images/background_image-2.png'
 import Background3 from '../../images/background_image-3.png'
 import { Row, Col } from 'react-bootstrap'
 import Partners from '../Partners'
-import Sold from '../Sold'
+// import Sold from '../Sold'
 import Products from '../products/Products'
 import NewsLetter from '../NewsLetter'
 
@@ -71,7 +71,7 @@ const HomeScreen = ({ match }) => {
 				</div>
 			</div>
 			<Row>
-				<Col className='text-center py-5 tokenize-bg'>
+				<Col className='text-center py-5 '>
 					<h1 className='featuredItems'>Arts</h1>
 					<div className='container d-flex justify-content-center'>
 						<hr className='black-line' />

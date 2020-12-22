@@ -6,6 +6,7 @@ import { listProducts } from '../../actions/productActions'
 import Message from '../Message'
 import Loader from '../Loader'
 import Paginate from '../../components/Paginate'
+// import ProductCarousel from '../ProductCarousel'
 
 const Products = ({ keyword, pageNumber }) => {
 	const dispatch = useDispatch()
@@ -25,6 +26,7 @@ const Products = ({ keyword, pageNumber }) => {
 				<Message variant='danger'>{error}</Message>
 			) : (
 				<Container>
+					{/* <ProductCarousel /> */}
 					<Row>
 						{products.map((product) => (
 							<Col key={product._id} sm={12} md={6} lg={4} xl={3}>

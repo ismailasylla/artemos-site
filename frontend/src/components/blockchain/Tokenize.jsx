@@ -1,11 +1,15 @@
 import React from 'react'
 import Signature from '../Signature'
 import { Button } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 const Tokenize = () => {
 	const Font = {
 		fontWeight: '400',
 		textAlign: 'justify',
+	}
+	const HeadingColor = {
+		color: '#212c51',
 	}
 
 	return (
@@ -13,17 +17,27 @@ const Tokenize = () => {
 			<section>
 				<img
 					style={{ height: 'auto', maxWidth: '100%', width: '100%' }}
-					src='https://artemos.net/wp-content/uploads/2020/06/Banner-3.jpg'
+					src='https://artemos.net/wp-content/uploads/2020/06/banner.jpg'
 					alt=''
 				/>
 			</section>
 			<section className='container-fluid'>
 				<>
-					<h2
-						className='d-flex justify-content-center p-5'
-						id='tokenize-section-2-h2'>
-						Asset Tokenization
-					</h2>
+					<Row>
+						<Col className='text-center '>
+							<h2
+								className='d-flex justify-content-center p-5'
+								id='tokenize-section-2-h2'
+								style={HeadingColor}>
+								Asset Tokenization
+							</h2>
+							<div className='container d-flex justify-content-center'>
+								<hr className='black-line' />
+								<hr className='red-line' />
+								<hr className='green-line' />
+							</div>
+						</Col>
+					</Row>
 					<div className='row' style={{ padding: '50px' }}>
 						<div className='col-sm'>
 							<h1 style={(Font, { color: '#8599AC' })}>
@@ -85,7 +99,8 @@ const Tokenize = () => {
 				<div className='container' style={{ padding: '50px' }}>
 					<h2
 						className='d-flex justify-content-center p-5'
-						id='tokenize-section-2-h2'>
+						id='tokenize-section-2-h2'
+						style={HeadingColor}>
 						Asset Tokenization Platform
 					</h2>
 					<p style={(Font, { textAlign: 'justify' })}>
@@ -101,11 +116,22 @@ const Tokenize = () => {
 			</section>
 			<section className='container-fluid'>
 				<>
-					<h2
-						className='d-flex justify-content-center p-5'
-						id='tokenize-section-2-h2'>
-						Tokenize
-					</h2>
+					<Row>
+						<Col className='text-center '>
+							<h2
+								className='d-flex justify-content-center p-5'
+								style={HeadingColor}
+								id='tokenize-section-2-h2'>
+								Tokenize
+							</h2>
+
+							<div className='container d-flex justify-content-center'>
+								<hr className='black-line' />
+								<hr className='red-line' />
+								<hr className='green-line' />
+							</div>
+						</Col>
+					</Row>
 
 					<div className='row' style={{ padding: '50px' }}>
 						<div className='col-sm'>
@@ -211,12 +237,12 @@ const Tokenize = () => {
 				</>
 			</section>
 			<section className='tokenize-bg'>
-				<div className='container  d-flex justify-content-center p-5'>
+				<div className='container  d-flex justify-content-center '>
 					<a href='https://meetings.hubspot.com/hello2226'>
 						<Button
 							type='submit'
 							variant='primary'
-							className='button-color m-2 '>
+							className='button-color m-2'>
 							BOOK A FREE CONSULTATION{' '}
 							<i className='fas fa-angle-double-right ml-2'></i>
 						</Button>{' '}

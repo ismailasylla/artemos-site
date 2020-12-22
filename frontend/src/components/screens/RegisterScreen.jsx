@@ -45,7 +45,7 @@ const RegisterScreen = ({ location, history }) => {
 			</h1>
 			<div className='container loginRegister-bg  mb-5 '>
 				<FormContainer>
-					<h1>Sign Up</h1>
+					<h1 style={{ color: 'rgb(21, 71, 44)' }}>Sign Up</h1>
 					{message && <Message variant='danger'>{message}</Message>}
 					{error && <Message variant='danger'>{error}</Message>}
 					{loading && <Loader />}

@@ -37,7 +37,7 @@ const LoginScreen = ({ location, history }) => {
 			</h1>
 			<div className='container loginRegister-bg  mb-5'>
 				<FormContainer>
-					<h1>Login</h1>
+					<h1 style={{ color: 'rgb(21, 71, 44)' }}>Login</h1>
 					{error && <Message variant='danger'>{error}</Message>}
 					{loading && <Loader />}
 					<Form onSubmit={submitHandler}>

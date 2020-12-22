@@ -893,6 +893,6 @@ h3,
 }
 
 .loginRegister-bg {
-	background: linear-gradient(45deg, #ffffff 0%, #003b44 100%);
-	border-radius: 20px;
+	/* background: linear-gradient(45deg, #ffffff 0%, #003b44 100%); */
+	color: rgb(21, 71, 44);
 }
