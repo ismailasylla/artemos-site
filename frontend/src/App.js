@@ -19,6 +19,8 @@ import ProductListScreen from './components/screens/ProductListScreen'
 import ProductEditScreen from './components/screens/ProductEditScreen'
 import OrderListScreen from './components/screens/OrderListScreen'
 import SearchScreen from './components/screens/SearchScreen'
+import About from './components/screens/About'
+import Tokenize from './components/blockchain/Tokenize'
 
 function App() {
 	return (
@@ -30,19 +32,50 @@ function App() {
 					<Route path='/register' component={RegisterScreen} />
 					<Route path='/login' component={LoginScreen} />
 					<Route path='/contact' component={Contact} />
-					<Route path='/product/:id' component={ProductScreen} />
+					<Route path='/about' component={About} />
+					<Route path='/tokenize' component={Tokenize} />
+					<Route path='/product/:id' component={ProductScreen} exact />
 					<Route path='/products' component={Products} />
-					<Route path='/cart/:id?' component={Cart} />
+					<Route path='/cart/:id?' component={Cart} exact />
 					<Route path='/shipping' component={ShippingScreen} />
 					<Route path='/payment' component={PaymentScreen} />
 					<Route path='/placeorder' component={PlaceOrderScreen} />
 					<Route path='/order/:id' component={OrderScreen} />
 					<Route path='/admin/userlist' component={UserListScreen} />
 					<Route path='/admin/user/:id/edit' component={UserEditScreen} />
-					<Route path='/admin/productlist' component={ProductListScreen} />
 					<Route path='/admin/product/:id/edit' component={ProductEditScreen} />
-					<Route path='/admin/orderlist' component={OrderListScreen} />
+					<Route
+						path='/admin/productlist'
+						component={ProductListScreen}
+						exact
+					/>
+					<Route
+						path='/admin/productlist/:pageNumber'
+						component={ProductListScreen}
+						exact
+					/>
+
+					<Route path='/admin/orderlist' component={OrderListScreen} exact />
+					<Route
+						path='/admin/orderlist:/pageNumber'
+						component={OrderListScreen}
+						exact
+					/>
+					{/* <Route path='/page/:pageNumber' exact component={OrderListScreen} /> */}
+					{/* <Route
+						path='/search/:keyword/page/:pageNumber'
+						exact
+						component={OrderListScreen}
+					/> */}
+
 					<Route path='/search/:keyword' component={SearchScreen} />
+					<Route path='/page/:pageNumber' exact component={HomeScreen} />
+					<Route
+						path='/search/:keyword/page/:pageNumber'
+						exact
+						component={HomeScreen}
+					/>
+
 					<Route path='/' exact component={HomeScreen} />
 				</Switch>
 			</main>

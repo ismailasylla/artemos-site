@@ -6,9 +6,12 @@ import { Row, Col } from 'react-bootstrap'
 import Partners from '../Partners'
 import Sold from '../Sold'
 import Products from '../products/Products'
+import NewsLetter from '../NewsLetter'
 
-const Home = ({ match }) => {
+const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword
+	const pageNumber = match.params.pageNumber || 1
+
 	const slider1 = {
 		backgroundSize: 'cover',
 
@@ -68,8 +71,8 @@ const Home = ({ match }) => {
 				</div>
 			</div>
 			<Row>
-				<Col className='text-center py-5 '>
-					<h1 className='featuredItems'>Featured Arts</h1>
+				<Col className='text-center py-5 tokenize-bg'>
+					<h1 className='featuredItems'>Arts</h1>
 					<div className='container d-flex justify-content-center'>
 						<hr className='black-line' />
 						<hr className='red-line' />
@@ -77,12 +80,14 @@ const Home = ({ match }) => {
 					</div>
 				</Col>
 			</Row>
-			<Products keyword={keyword} />
+			<Products keyword={keyword} pageNumber={pageNumber} />
+
 			{/* <FeaturedItems /> */}
-			<Sold />
+			{/* <Sold /> */}
+			<NewsLetter />
 			<Partners />
 		</>
 	)
 }
 
-export default Home
+export default HomeScreen

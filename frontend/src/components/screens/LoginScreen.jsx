@@ -6,6 +6,7 @@ import Message from '../../components/Message'
 import Loader from '../../components/Loader'
 import { login } from '../../actions/userActions'
 import FormContainer from '../FormContainer'
+import Logo from '../../images/logo/logo.png'
 
 const LoginScreen = ({ location, history }) => {
 	const [email, setEmail] = useState('')
@@ -30,44 +31,52 @@ const LoginScreen = ({ location, history }) => {
 		dispatch(login(email, password))
 	}
 	return (
-		<FormContainer>
-			<h1>Login</h1>
-			{error && <Message variant='danger'>{error}</Message>}
-			{loading && <Loader />}
-			<Form onSubmit={submitHandler}>
-				<Form.Group controlId='email'>
-					<Form.Label>Email Address</Form.Label>
-					<Form.Control
-						type='email'
-						placeholder='Enter Email'
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}></Form.Control>
-				</Form.Group>
-				<Form.Group controlId='password'>
-					<Form.Label>Password</Form.Label>
-					<Form.Control
-						type='password'
-						placeholder='Enter password'
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}></Form.Control>
-				</Form.Group>
-				<Button
-					type='submit'
-					variant='primary'
-					className='button-color m-2'
-					size='sm'>
-					<i className='fas fa-user'></i> Sign In
-				</Button>{' '}
-			</Form>
-			<Row className='py-3'>
-				<Col>
-					Don't have an account?{' '}
-					<Link to={redirect ? `/register?redirect=${redirect}` : `/register`}>
-						<strong style={{ color: '#145059' }}>Register</strong>{' '}
-					</Link>
-				</Col>
-			</Row>
-		</FormContainer>
+		<>
+			<h1 className='logo d-flex justify-content-center'>
+				<img src={Logo} alt='' style={{ width: '144px' }} />
+			</h1>
+			<div className='container loginRegister-bg  mb-5'>
+				<FormContainer>
+					<h1>Login</h1>
+					{error && <Message variant='danger'>{error}</Message>}
+					{loading && <Loader />}
+					<Form onSubmit={submitHandler}>
+						<Form.Group controlId='email'>
+							<Form.Label>Email Address</Form.Label>
+							<Form.Control
+								type='email'
+								placeholder='Enter Email'
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}></Form.Control>
+						</Form.Group>
+						<Form.Group controlId='password'>
+							<Form.Label>Password</Form.Label>
+							<Form.Control
+								type='password'
+								placeholder='Enter password'
+								value={password}
+								onChange={(e) => setPassword(e.target.value)}></Form.Control>
+						</Form.Group>
+						<Button
+							type='submit'
+							variant='primary'
+							className='button-color m-2'
+							size='sm'>
+							<i className='fas fa-user'></i> Sign In
+						</Button>{' '}
+					</Form>
+					<Row className='py-3'>
+						<Col>
+							Don't have an account?{' '}
+							<Link
+								to={redirect ? `/register?redirect=${redirect}` : `/register`}>
+								<strong style={{ color: '#145059' }}>Register</strong>{' '}
+							</Link>
+						</Col>
+					</Row>
+				</FormContainer>
+			</div>
+		</>
 	)
 }
 
