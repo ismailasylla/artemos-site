@@ -52,7 +52,7 @@ const Header = () => {
 							</NavDropdown.Item>
 						</NavDropdown>
 
-						<Nav.Link href='#link'>Sell</Nav.Link>
+						{/* <Nav.Link href='#link'>Sell</Nav.Link> */}
 						<NavDropdown title='Services' id='basic-nav-dropdown'>
 							<NavDropdown.Item href='#action/3.1'>Fine Art</NavDropdown.Item>
 							<NavDropdown.Item href='#action/3.2'>
@@ -65,12 +65,14 @@ const Header = () => {
 								Tokenization
 							</NavDropdown.Item>
 						</NavDropdown>
-						{/* <LinkContainer to='/about' style={{ textDecoration: 'none' }}>
-							<Nav.Link>About Us</Nav.Link>
-						</LinkContainer> */}
-						<LinkContainer to='/contact' style={{ textDecoration: 'none' }}>
-							<Nav.Link>Contact</Nav.Link>
-						</LinkContainer>
+						<NavDropdown title='More' id='basic-nav-dropdown'>
+							<LinkContainer to='/about' style={{ textDecoration: 'none' }}>
+								<NavDropdown.Item href='#action/3.1'>About</NavDropdown.Item>
+							</LinkContainer>
+							<LinkContainer to='/contact' style={{ textDecoration: 'none' }}>
+								<NavDropdown.Item href='#action/3.2'>Contact</NavDropdown.Item>
+							</LinkContainer>
+						</NavDropdown>
 					</Nav>
 
 					<Route render={({ history }) => <SearchBox history={history} />} />

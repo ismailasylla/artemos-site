@@ -19,6 +19,7 @@ import ProductListScreen from './components/screens/ProductListScreen'
 import ProductEditScreen from './components/screens/ProductEditScreen'
 import OrderListScreen from './components/screens/OrderListScreen'
 import SearchScreen from './components/screens/SearchScreen'
+import About from './components/screens/About'
 
 function App() {
 	return (
@@ -30,6 +31,7 @@ function App() {
 					<Route path='/register' component={RegisterScreen} />
 					<Route path='/login' component={LoginScreen} />
 					<Route path='/contact' component={Contact} />
+					<Route path='/about' component={About} />
 					<Route path='/product/:id' component={ProductScreen} />
 					<Route path='/products' component={Products} />
 					<Route path='/cart/:id?' component={Cart} />
@@ -39,6 +41,7 @@ function App() {
 					<Route path='/order/:id' component={OrderScreen} />
 					<Route path='/admin/userlist' component={UserListScreen} />
 					<Route path='/admin/user/:id/edit' component={UserEditScreen} />
+					<Route path='/admin/product/:id/edit' component={ProductEditScreen} />
 					<Route
 						path='/admin/productlist'
 						component={ProductListScreen}
@@ -49,8 +52,20 @@ function App() {
 						component={ProductListScreen}
 						exact
 					/>
-					<Route path='/admin/product/:id/edit' component={ProductEditScreen} />
-					<Route path='/admin/orderlist' component={OrderListScreen} />
+
+					<Route path='/admin/orderlist' component={OrderListScreen} exact />
+					<Route
+						path='/admin/orderlist:/pageNumber'
+						component={OrderListScreen}
+						exact
+					/>
+					{/* <Route path='/page/:pageNumber' exact component={OrderListScreen} /> */}
+					{/* <Route
+						path='/search/:keyword/page/:pageNumber'
+						exact
+						component={OrderListScreen}
+					/> */}
+
 					<Route path='/search/:keyword' component={SearchScreen} />
 					<Route path='/page/:pageNumber' exact component={HomeScreen} />
 					<Route
@@ -58,6 +73,7 @@ function App() {
 						exact
 						component={HomeScreen}
 					/>
+
 					<Route path='/' exact component={HomeScreen} />
 				</Switch>
 			</main>
