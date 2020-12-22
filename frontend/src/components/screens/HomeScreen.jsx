@@ -7,6 +7,7 @@ import Partners from '../Partners'
 // import Sold from '../Sold'
 import Products from '../products/Products'
 import NewsLetter from '../NewsLetter'
+import Signature from '../Signature'
 
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword
@@ -72,7 +73,14 @@ const HomeScreen = ({ match }) => {
 			</div>
 			<Row>
 				<Col className='text-center py-5 '>
+					<div className='container d-flex justify-content-center'>
+						{/* <Signature
+							style={{ width: '150px' }}
+							className='d-flex justify-content-center'
+						/> */}
+					</div>
 					<h1 className='featuredItems'>Arts</h1>
+
 					<div className='container d-flex justify-content-center'>
 						<hr className='black-line' />
 						<hr className='red-line' />
@@ -80,6 +88,7 @@ const HomeScreen = ({ match }) => {
 					</div>
 				</Col>
 			</Row>
+
 			<Products keyword={keyword} pageNumber={pageNumber} />
 
 			{/* <FeaturedItems /> */}

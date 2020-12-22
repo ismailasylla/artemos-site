@@ -1,11 +1,22 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Card, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Rating from './Rating'
-
+import Signature from '../Signature'
 const Product = ({ product }) => {
 	return (
 		<>
+			<Row>
+				<Col className='text-center  '>
+					{/* <h1 className='featuredItems'>Arts</h1> */}
+					<Signature style={{ width: '150px' }} />
+					<div className='container d-flex justify-content-center'>
+						<hr className='black-line' />
+						<hr className='red-line' />
+						<hr className='green-line' />
+					</div>
+				</Col>
+			</Row>
 			<Card className='my-3 p-3 rounded '>
 				<Link to={`/product/${product._id}`}>
 					<Card.Img src={product.image} variant='top' />
