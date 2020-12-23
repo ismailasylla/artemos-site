@@ -21,7 +21,7 @@ const ProductCarousel = () => {
 	) : error ? (
 		<Message variant='danger'>{error}</Message>
 	) : (
-		<Carousel pause='hover' className='bg-light'>
+		<Carousel pause='hover' className='carousel-bg mt-5'>
 			{products.map((product) => (
 				<Carousel.Item key={product._id}>
 					<Container className='d-flex justify-content-center py-3'>
@@ -49,10 +49,10 @@ const ProductCarousel = () => {
 												id='terms'>
 												<li>
 													<strong>
-														<h1>{product.name} </h1>
+														<h1 style={{ color: 'white' }}>{product.name} </h1>
 													</strong>
 													<strong>
-														<p style={{ color: 'black' }}>
+														<p style={{ color: 'white' }}>
 															Price:{' '}
 															<span style={{ color: '#B12704' }}>
 																${product.price}
