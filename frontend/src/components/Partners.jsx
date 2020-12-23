@@ -15,7 +15,9 @@ const Partners = () => {
 									className='d-flex justify-content-center'
 								/>
 							</div>
-							<h1 className='featuredItems' style={{ marginBottom: '-20px' }}>
+							<h1
+								className='featuredItems'
+								style={{ marginBottom: '-20px', marginTop: '-60px' }}>
 								Our Partners
 							</h1>
 
