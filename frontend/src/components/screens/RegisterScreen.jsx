@@ -41,7 +41,11 @@ const RegisterScreen = ({ location, history }) => {
 	return (
 		<>
 			<h1 className='logo d-flex justify-content-center'>
-				<img src={Logo} alt='' style={{ width: '144px' }} />
+				<img
+					src={Logo}
+					alt=''
+					style={{ width: '144px', height: '50px', marginBottom: '-50px' }}
+				/>
 			</h1>
 			<div className='container loginRegister-bg  mb-5 '>
 				<FormContainer>

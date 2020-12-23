@@ -96,7 +96,12 @@ const ProductScreen = ({ history, match }) => {
 								</div>
 							</ListGroup>
 							<ListGroup variant='flush'>
-								<ListGroup.Item>Price: $ {product.price}</ListGroup.Item>
+								<ListGroup.Item>
+									Price:
+									<span style={{ color: '#B12704' }} className='ml-2'>
+										$ {product.price}
+									</span>{' '}
+								</ListGroup.Item>
 							</ListGroup>
 							<ListGroup variant='flush'>
 								<ListGroup.Item>
@@ -111,7 +116,9 @@ const ProductScreen = ({ history, match }) => {
 										<Row>
 											<Col>Price: </Col>
 											<Col>
-												<strong>$ {product.price}</strong>
+												<strong style={{ color: '#B12704' }}>
+													$ {product.price}
+												</strong>
 											</Col>
 										</Row>
 									</ListGroup.Item>
@@ -119,7 +126,11 @@ const ProductScreen = ({ history, match }) => {
 										<Row>
 											<Col>Status: </Col>
 											<Col>
-												{product.countInStock > 0 ? 'In Stock' : 'Out Of Stock'}
+												<span style={{ color: 'green' }}>
+													{product.countInStock > 0
+														? 'In Stock'
+														: 'Out Of Stock'}
+												</span>
 											</Col>
 										</Row>
 									</ListGroup.Item>
