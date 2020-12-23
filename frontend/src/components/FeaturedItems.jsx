@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Container, Row, Col, Button } from 'react-bootstrap'
-import FeaturedFooter from './FeaturedFooter'
+
 import Featured1 from '../images/featured/featured1.png'
 import Loader from './Loader'
 import Message from './Message'
@@ -232,7 +232,6 @@ const FeaturedItems = () => {
 					</div>
 				</div> */}
 				{/* // Featured items footer */}
-				<FeaturedFooter />
 			</div>
 		</>
 	)

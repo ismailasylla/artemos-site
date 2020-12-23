@@ -2,13 +2,11 @@ import React from 'react'
 import Background1 from '../../images/background_image-1.png'
 import Background2 from '../../images/background_image-2.png'
 import Background3 from '../../images/background_image-3.png'
-// import { Row, Col } from 'react-bootstrap'
 import Partners from '../Partners'
-// import Sold from '../Sold'
+import FeaturedFooter from '../FeaturedFooter'
 import Products from '../products/Products'
 import NewsLetter from '../NewsLetter'
 import FeaturedItems from '../FeaturedItems'
-// import Signature from '../Signature'
 
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword
@@ -72,11 +70,9 @@ const HomeScreen = ({ match }) => {
 					</a>
 				</div>
 			</div>
-
 			<Products keyword={keyword} pageNumber={pageNumber} />
-
+			<FeaturedFooter />
 			<FeaturedItems />
-			{/* <Sold /> */}
 			<NewsLetter />
 			<Partners />
 		</>

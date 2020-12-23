@@ -201,6 +201,16 @@ h5 {
 	width: 100%;
 	height: 100%;
 }
+.bespart2 {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+
+	background-color: transparent;
+
+	width: 100%;
+	height: 100%;
+}
 
 /* End About section 2 
  */
