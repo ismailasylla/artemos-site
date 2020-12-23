@@ -170,12 +170,18 @@ const ProductScreen = ({ history, match }) => {
 						</Col>
 					</Row>
 					<Row>
-						<Col md={6}>
+						<Col md={6} className='mt-3'>
 							<h2>Reviews</h2>
 							{product.reviews.length === 0 && <Message>No Reviews</Message>}
 							<ListGroup variant='flush'>
 								{product.reviews.map((review) => (
 									<ListGroup.Item key={review._id}>
+										<img
+											src='https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg'
+											alt=''
+											className='rounded-circle mb-2'
+											style={{ width: '50px' }}
+										/>
 										<strong>{review.name}</strong>
 										<Rating value={review.rating} />
 										<p>{review.createdAt.substring(0, 10)}</p>

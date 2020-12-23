@@ -1,4 +1,6 @@
 import React from 'react'
+import ProductCarousel from '../components/ProductCarousel'
+import NewsLetter from '../components/NewsLetter'
 // import background from '../images/art-bg.png'
 
 const Contact = () => {
@@ -154,6 +156,10 @@ const Contact = () => {
 						</div>
 					</div>
 				</div>
+			</section>
+			<NewsLetter />
+			<section>
+				<ProductCarousel />
 			</section>
 		</div>
 	)
