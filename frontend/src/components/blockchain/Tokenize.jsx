@@ -29,7 +29,7 @@ const Tokenize = () => {
 							<h2
 								className='d-flex justify-content-center p-5'
 								id='tokenize-section-2-h2'
-								style={HeadingColor}>
+								style={(HeadingColor, { marginBottom: '-50px' })}>
 								Asset Tokenization
 							</h2>
 							<div className='container d-flex justify-content-center'>
@@ -101,7 +101,7 @@ const Tokenize = () => {
 					<h2
 						className='d-flex justify-content-center p-5'
 						id='tokenize-section-2-h2'
-						style={HeadingColor}>
+						style={(HeadingColor, { marginBottom: '-50px' })}>
 						Asset Tokenization Platform
 					</h2>
 					<div className='container d-flex justify-content-center'>
@@ -118,11 +118,11 @@ const Tokenize = () => {
 						Collectors, Gallery, And Fine Art assets acquisitions companies can
 						tokenize their Artwork assets.
 					</p>
-					<div className='container d-flex justify-content-center'>
+					{/* <div className='container d-flex justify-content-center'>
 						<hr className='black-line' />
 						<hr className='red-line' />
 						<hr className='green-line' />
-					</div>
+					</div> */}
 				</div>
 			</section>
 			<section className='container-fluid'>
@@ -131,7 +131,9 @@ const Tokenize = () => {
 						<Col className='text-center '>
 							<h2
 								className='d-flex justify-content-center p-5'
-								style={HeadingColor}
+								style={
+									(HeadingColor, { marginBottom: '-50px', marginTop: '-60px' })
+								}
 								id='tokenize-section-2-h2'>
 								Tokenize
 							</h2>
