@@ -15,7 +15,9 @@ const Partners = () => {
 									className='d-flex justify-content-center'
 								/>
 							</div>
-							<h1 className='featuredItems'>Our Partners</h1>
+							<h1 className='featuredItems' style={{ marginBottom: '-20px' }}>
+								Our Partners
+							</h1>
 
 							<div className='container d-flex justify-content-center'>
 								<hr className='black-line' />
