@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { ImageZoom } from 'react-simple-image-zoom'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import {
@@ -79,8 +80,23 @@ const ProductScreen = ({ history, match }) => {
 				<>
 					<Row>
 						<Col md={6}>
-							<Image src={product.image} alt={product.name}></Image>
+							<ImageZoom
+								portalId='portal'
+								largeImgSrc={product.image}
+								imageWidth={540}
+								imageHeight={540}
+								zoomContainerWidth={640}
+								activeClass='my-active'
+								portalStyle={Object.assign(
+									{ ...ImageZoom.defaultPortalStyle },
+									{ top: '0px' },
+								)}
+								zoomScale={5}
+								responsive={true}>
+								<Image src={product.image} alt={product.name}></Image>
+							</ImageZoom>
 						</Col>
+						<div id='portal' className='slick-side ' />
 						<Col md={3}>
 							<ListGroup>
 								<ListGroup.Item>

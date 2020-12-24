@@ -937,3 +937,7 @@ h3,
 .carousel-bg {
 	background: linear-gradient(45deg, #efefef 0%, #000000 100%);
 }
+.slick-side {
+	position: relative;
+	z-index: 1000;
+}
