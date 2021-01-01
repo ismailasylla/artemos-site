@@ -25,7 +25,6 @@ const NewsLetter = () => {
 						<div className='col-sm'>
 							<div class='subscription-wrapper'>
 								<div class='d-flex subscription-content justify-content-between align-items-center flex-column flex-md-row text-center text-md-left'>
-									{/* <h3 class="flex-fill">Subscribe <br> to our newsletter</h3> */}
 									<form action='#' class='row flex-fill'>
 										<div class='col-lg-7 my-md-2 my-2'>
 											{' '}
@@ -41,7 +40,7 @@ const NewsLetter = () => {
 											{' '}
 											<button
 												type='submit'
-												class='btn btn-primary btn-md border-0 w-100'>
+												className='btn btn-primary btn-md border-0 w-100 ml-2'>
 												Subscribe Now
 											</button>{' '}
 										</div>

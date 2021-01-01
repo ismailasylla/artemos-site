@@ -1,12 +1,13 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import Background1 from '../../images/background_image-1.png'
 import Background2 from '../../images/background_image-2.png'
 import Background3 from '../../images/background_image-3.png'
-import { Row, Col } from 'react-bootstrap'
 import Partners from '../Partners'
-import Sold from '../Sold'
+import FeaturedFooter from '../FeaturedFooter'
 import Products from '../products/Products'
 import NewsLetter from '../NewsLetter'
+import FeaturedItems from '../FeaturedItems'
 
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword
@@ -28,6 +29,15 @@ const HomeScreen = ({ match }) => {
 
 	return (
 		<>
+			<Helmet>
+				<title>Welcome to Artemos | Home</title>
+				<meta
+					name='description'
+					content='We are among the top art seller worldwide'></meta>
+				<meta
+					name='keywords'
+					content='Arts, Art, Buy Arts alphaseed Technology, Alphaseed '></meta>
+			</Helmet>
 			<div>
 				<div
 					id='carouselExampleIndicators'
@@ -70,20 +80,9 @@ const HomeScreen = ({ match }) => {
 					</a>
 				</div>
 			</div>
-			<Row>
-				<Col className='text-center py-5 tokenize-bg'>
-					<h1 className='featuredItems'>Arts</h1>
-					<div className='container d-flex justify-content-center'>
-						<hr className='black-line' />
-						<hr className='red-line' />
-						<hr className='green-line' />
-					</div>
-				</Col>
-			</Row>
 			<Products keyword={keyword} pageNumber={pageNumber} />
-
-			{/* <FeaturedItems /> */}
-			{/* <Sold /> */}
+			<FeaturedFooter />
+			<FeaturedItems />
 			<NewsLetter />
 			<Partners />
 		</>

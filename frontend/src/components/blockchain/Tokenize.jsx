@@ -1,38 +1,61 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import Signature from '../Signature'
 import { Button } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
+import NewsLetter from '../NewsLetter'
 
 const Tokenize = () => {
 	const Font = {
 		fontWeight: '400',
 		textAlign: 'justify',
 	}
+	const HeadingColor = {
+		color: '#212c51',
+	}
 
 	return (
 		<>
+			<Helmet>
+				<title>Artemos | Tokenize</title>
+				<meta name='description' content='ART - TOKENIZATION'></meta>
+				<meta
+					name='keywords'
+					content='Arts, Art, Buy Arts Artemos alphaseed technology'></meta>
+			</Helmet>
 			<section>
 				<img
 					style={{ height: 'auto', maxWidth: '100%', width: '100%' }}
-					src='https://artemos.net/wp-content/uploads/2020/06/Banner-3.jpg'
+					src='https://artemos.net/wp-content/uploads/2020/06/banner.jpg'
 					alt=''
 				/>
 			</section>
 			<section className='container-fluid'>
 				<>
-					<h2
-						className='d-flex justify-content-center p-5'
-						id='tokenize-section-2-h2'>
-						Asset Tokenization
-					</h2>
+					<Row>
+						<Col className='text-center '>
+							<h2
+								className='d-flex justify-content-center p-5'
+								id='tokenize-section-2-h2'
+								style={(HeadingColor, { marginBottom: '-50px' })}>
+								Asset Tokenization
+							</h2>
+							<div className='container d-flex justify-content-center'>
+								<hr className='black-line' />
+								<hr className='red-line' />
+								<hr className='green-line' />
+							</div>
+						</Col>
+					</Row>
 					<div className='row' style={{ padding: '50px' }}>
 						<div className='col-sm'>
-							<h1 style={(Font, { color: '#8599AC' })}>
+							<h2 style={(Font, { color: '#8599AC' })}>
 								<Signature style={{ width: '150px' }} />
 								Tokenize{' '}
-								<span style={{ fontWeight: '400', color: '#212C51' }}>
+								<span style={{ fontWeight: '00', color: '#212C51' }}>
 									- All Your Real World Assets
 								</span>
-							</h1>
+							</h2>
 
 							<p style={(Font, { textAlign: 'justify' })}>
 								Tokenization of Things is the buzzword at the moment around the
@@ -85,9 +108,15 @@ const Tokenize = () => {
 				<div className='container' style={{ padding: '50px' }}>
 					<h2
 						className='d-flex justify-content-center p-5'
-						id='tokenize-section-2-h2'>
+						id='tokenize-section-2-h2'
+						style={(HeadingColor, { marginBottom: '-50px' })}>
 						Asset Tokenization Platform
 					</h2>
+					<div className='container d-flex justify-content-center'>
+						<hr className='black-line' />
+						<hr className='red-line' />
+						<hr className='green-line' />
+					</div>
 					<p style={(Font, { textAlign: 'justify' })}>
 						A customized end-to-end tokenized assets issuance platform for
 						issuers and their specific target industry includes specific art
@@ -97,15 +126,33 @@ const Tokenize = () => {
 						Collectors, Gallery, And Fine Art assets acquisitions companies can
 						tokenize their Artwork assets.
 					</p>
+					{/* <div className='container d-flex justify-content-center'>
+						<hr className='black-line' />
+						<hr className='red-line' />
+						<hr className='green-line' />
+					</div> */}
 				</div>
 			</section>
 			<section className='container-fluid'>
 				<>
-					<h2
-						className='d-flex justify-content-center p-5'
-						id='tokenize-section-2-h2'>
-						Tokenize
-					</h2>
+					<Row>
+						<Col className='text-center '>
+							<h2
+								className='d-flex justify-content-center p-5'
+								style={
+									(HeadingColor, { marginBottom: '-50px', marginTop: '-60px' })
+								}
+								id='tokenize-section-2-h2'>
+								Tokenize
+							</h2>
+
+							<div className='container d-flex justify-content-center'>
+								<hr className='black-line' />
+								<hr className='red-line' />
+								<hr className='green-line' />
+							</div>
+						</Col>
+					</Row>
 
 					<div className='row' style={{ padding: '50px' }}>
 						<div className='col-sm'>
@@ -167,62 +214,9 @@ const Tokenize = () => {
 				</div>
 			</section>
 
-			<section
-				className='container-fluid section-3 '
-				style={{ marginBottom: '0px' }}>
-				<>
-					<div className='row' style={{ padding: '50px' }}>
-						<div className='col-sm'>
-							<h1 style={(Font, { color: '#8599AC' })}>
-								<Signature style={{ width: '150px' }} />
-								<h2 class='elementor-heading-title elementor-size-default section-3-h2'>
-									Join our mailing list to receive updates from ARTEMOS
-								</h2>{' '}
-							</h1>
-						</div>
-						<div className='col-sm'>
-							<div class='subscription-wrapper'>
-								<div class='subscription-content d-flex justify-content-between align-items-center flex-column flex-md-row text-center text-md-left'>
-									{/* <h3 class="flex-fill">Subscribe <br> to our newsletter</h3> */}
-									<form action='#' class='row flex-fill'>
-										<div class='col-lg-7 my-md-2 my-2'>
-											{' '}
-											<input
-												type='email'
-												class='form-control px-4 border-0 w-100 text-center text-md-left'
-												id='email'
-												placeholder='Your Email'
-												name='email'
-											/>{' '}
-										</div>
-										<div class='col-lg-5 my-md-2 my-2'>
-											{' '}
-											<button
-												type='submit'
-												class='btn btn-primary btn-md border-0 w-100'>
-												Subscribe Now
-											</button>{' '}
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</>
-			</section>
-			<section className='tokenize-bg'>
-				<div className='container  d-flex justify-content-center p-5'>
-					<a href='https://meetings.hubspot.com/hello2226'>
-						<Button
-							type='submit'
-							variant='primary'
-							className='button-color m-2 '>
-							BOOK A FREE CONSULTATION{' '}
-							<i className='fas fa-angle-double-right ml-2'></i>
-						</Button>{' '}
-					</a>
-				</div>
-			</section>
+			<>
+				<NewsLetter />
+			</>
 		</>
 	)
 }

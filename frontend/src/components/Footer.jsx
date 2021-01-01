@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
+import { Button, NavDropdown } from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 import Logo from '../images/logo/logo.png'
 
 const Footer = () => {
@@ -31,7 +32,7 @@ const Footer = () => {
 								</ul>
 							</div>
 							<div className='col-lg-2  col-md-2 col-sm-4 col-xs-6'>
-								<h6> Services </h6>
+								<h6> About & Services </h6>
 								<ul>
 									<li>
 										{' '}
@@ -47,7 +48,21 @@ const Footer = () => {
 									</li>
 									<li>
 										{' '}
-										<a href={'/'}> Tokenization</a>{' '}
+										{/* <a href={'/'}> Tokenization</a>{' '} */}
+										<LinkContainer
+											to='/tokenize'
+											style={{ textDecoration: 'none' }}>
+											<NavDropdown.Item>Tokenization</NavDropdown.Item>
+										</LinkContainer>
+									</li>
+									<li>
+										{' '}
+										{/* <a href={'/'}> Tokenization</a>{' '} */}
+										<LinkContainer
+											to='/about'
+											style={{ textDecoration: 'none' }}>
+											<NavDropdown.Item>Who We Are</NavDropdown.Item>
+										</LinkContainer>
 									</li>
 								</ul>
 							</div>
@@ -60,7 +75,12 @@ const Footer = () => {
 									</li>
 									<li>
 										{' '}
-										<a href={'/'}>Tokenize </a>{' '}
+										{/* <a href={'/'}>Tokenize </a>{' '} */}
+										<LinkContainer
+											to='/tokenize'
+											style={{ textDecoration: 'none' }}>
+											<NavDropdown.Item>Tokenize</NavDropdown.Item>
+										</LinkContainer>
 									</li>
 									<li>
 										{' '}

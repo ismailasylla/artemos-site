@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
@@ -40,12 +41,19 @@ const RegisterScreen = ({ location, history }) => {
 	}
 	return (
 		<>
+			<Helmet>
+				<title>Artemos | Register</title>
+			</Helmet>
 			<h1 className='logo d-flex justify-content-center'>
-				<img src={Logo} alt='' style={{ width: '144px' }} />
+				<img
+					src={Logo}
+					alt=''
+					style={{ width: '144px', height: '50px', marginBottom: '-50px' }}
+				/>
 			</h1>
 			<div className='container loginRegister-bg  mb-5 '>
 				<FormContainer>
-					<h1>Sign Up</h1>
+					<h1 style={{ color: 'rgb(21, 71, 44)' }}>Sign Up</h1>
 					{message && <Message variant='danger'>{message}</Message>}
 					{error && <Message variant='danger'>{error}</Message>}
 					{loading && <Loader />}

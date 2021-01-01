@@ -1,22 +1,35 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import Signature from './Signature'
 
 const Partners = () => {
 	return (
-		<div>
-			<Container>
-				<Row>
-					<Col className='text-center py-3 '>
-						<h1 className='featuredItems'>Our Partners</h1>
-						<div className='container d-flex justify-content-center'>
-							<hr className='black-line' />
-							<hr className='red-line' />
-							<hr className='green-line' />
-						</div>
-					</Col>
-				</Row>
-			</Container>
-			{/* <div class='container text-center my-3'>
+		<>
+			<div>
+				<Container>
+					<Row>
+						<Col className='text-center py-3 '>
+							<div className='container d-flex justify-content-center'>
+								<Signature
+									style={{ width: '150px' }}
+									className='d-flex justify-content-center'
+								/>
+							</div>
+							<h1
+								className='featuredItems'
+								style={{ marginBottom: '-20px', marginTop: '-60px' }}>
+								Our Partners
+							</h1>
+
+							<div className='container d-flex justify-content-center'>
+								<hr className='black-line' />
+								<hr className='red-line' />
+								<hr className='green-line' />
+							</div>
+						</Col>
+					</Row>
+				</Container>
+				{/* <div class='container text-center my-3'>
 				<div
 					id='recipeCarousel'
 					class='carousel slide w-100'
@@ -93,16 +106,17 @@ const Partners = () => {
 					</a>
 				</div>
 			</div> */}
-			<div
-				class='gallery js-flickity'
-				data-flickity-options='{ "wrapAround": true }'>
-				<div className='gallery-cell'></div>
-				<div className='gallery-cell'></div>
-				<div className='gallery-cell'></div>
-				<div className='gallery-cell'></div>
-				<div className='gallery-cell'></div>
+				<div
+					class='gallery js-flickity'
+					data-flickity-options='{ "wrapAround": true }'>
+					<div className='gallery-cell'></div>
+					<div className='gallery-cell'></div>
+					<div className='gallery-cell'></div>
+					<div className='gallery-cell'></div>
+					<div className='gallery-cell'></div>
+				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 

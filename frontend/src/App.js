@@ -21,18 +21,20 @@ import OrderListScreen from './components/screens/OrderListScreen'
 import SearchScreen from './components/screens/SearchScreen'
 import About from './components/screens/About'
 import Tokenize from './components/blockchain/Tokenize'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
 	return (
 		<>
 			<Header />
 			<main>
+				<ScrollToTop />
 				<Switch>
 					<Route path='/profile' component={ProfileScreen} />
 					<Route path='/register' component={RegisterScreen} />
 					<Route path='/login' component={LoginScreen} />
 					<Route path='/contact' component={Contact} />
-					<Route path='/about' component={About} />
+					<Route path='/about' component={About} exact />
 					<Route path='/tokenize' component={Tokenize} />
 					<Route path='/product/:id' component={ProductScreen} exact />
 					<Route path='/products' component={Products} />
