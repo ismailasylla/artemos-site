@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import Signature from '../Signature'
 import NewsLetter from '../NewsLetter'
 
@@ -10,6 +11,14 @@ const About = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>Artemos | About</title>
+				<meta
+					name='description'
+					content='We are among the top art seller worldwide'></meta>
+				<meta name='keywords' content='Arts, Art, Buy Arts'></meta>
+			</Helmet>
+
 			<section>
 				<img
 					style={{ height: 'auto', maxWidth: '100%', width: '100%' }}

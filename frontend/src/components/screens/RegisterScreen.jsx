@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
@@ -40,6 +41,9 @@ const RegisterScreen = ({ location, history }) => {
 	}
 	return (
 		<>
+			<Helmet>
+				<title>Artemos | Register</title>
+			</Helmet>
 			<h1 className='logo d-flex justify-content-center'>
 				<img
 					src={Logo}

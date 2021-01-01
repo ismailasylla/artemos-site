@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductCarousel from '../components/ProductCarousel'
+// import ProductCarousel from '../components/ProductCarousel'
 import NewsLetter from '../components/NewsLetter'
 // import background from '../images/art-bg.png'
 
@@ -158,9 +158,7 @@ const Contact = () => {
 				</div>
 			</section>
 			<NewsLetter />
-			<section>
-				<ProductCarousel />
-			</section>
+			<section>{/* <ProductCarousel /> */}</section>
 		</div>
 	)
 }

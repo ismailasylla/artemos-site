@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import Background1 from '../../images/background_image-1.png'
 import Background2 from '../../images/background_image-2.png'
 import Background3 from '../../images/background_image-3.png'
@@ -28,6 +29,15 @@ const HomeScreen = ({ match }) => {
 
 	return (
 		<>
+			<Helmet>
+				<title>Welcome to Artemos | Home</title>
+				<meta
+					name='description'
+					content='We are among the top art seller worldwide'></meta>
+				<meta
+					name='keywords'
+					content='Arts, Art, Buy Arts alphaseed Technology, Alphaseed '></meta>
+			</Helmet>
 			<div>
 				<div
 					id='carouselExampleIndicators'

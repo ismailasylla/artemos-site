@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import Signature from '../Signature'
 import { Button } from 'react-bootstrap'
 import { Row, Col } from 'react-bootstrap'
@@ -15,6 +16,13 @@ const Tokenize = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>Artemos | Tokenize</title>
+				<meta name='description' content='ART - TOKENIZATION'></meta>
+				<meta
+					name='keywords'
+					content='Arts, Art, Buy Arts Artemos alphaseed technology'></meta>
+			</Helmet>
 			<section>
 				<img
 					style={{ height: 'auto', maxWidth: '100%', width: '100%' }}
