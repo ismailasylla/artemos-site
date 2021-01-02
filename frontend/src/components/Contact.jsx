@@ -14,7 +14,7 @@ const Contact = () => {
 	// 	// lineHeight: '1',
 	// 	// width: '1920px',
 	// 	// height: '820px',
-	// 	backgroundSize: 'cover',
+	// 	backgroundSize: 'cover', 
 
 	// 	backgroundImage: `url(${background})`,
 	// }

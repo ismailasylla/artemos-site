@@ -14,6 +14,7 @@ import {
 } from 'react-bootstrap'
 import Message from '../../components/Message'
 import { addToCart, removeFromCart } from '../../actions/cartActions'
+import { Helmet } from 'react-helmet'
 
 const CartScreen = ({ match, location, history }) => {
 	const productId = match.params.id
@@ -43,6 +44,15 @@ const CartScreen = ({ match, location, history }) => {
 
 	return (
 		<Container className='py-5'>
+			<Helmet>
+				<title>Artemos | Cart</title>
+				<meta
+					name='description'
+					content='We are among the top art seller worldwide'></meta>
+				<meta
+					name='keywords'
+					content='Arts, Art, Buy Arts alphaseed Technology, Alphaseed '></meta>
+			</Helmet>
 			<Link to='/products'>
 				<Button variant='primary' className='button-color m-2 my-3' size='sm'>
 					<i className='fas fa-arrow-left'></i> Go Back
