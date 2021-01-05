@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 // import ProductCarousel from '../components/ProductCarousel'
 import NewsLetter from '../components/NewsLetter'
 // import background from '../images/art-bg.png'
@@ -14,13 +15,16 @@ const Contact = () => {
 	// 	// lineHeight: '1',
 	// 	// width: '1920px',
 	// 	// height: '820px',
-	// 	backgroundSize: 'cover', 
+	// 	backgroundSize: 'cover',
 
 	// 	backgroundImage: `url(${background})`,
 	// }
 	return (
 		// <div style={{ backgroundImage: `url(${background})` }}>
 		<div>
+			<Helmet>
+				<title>Artemos | Contact</title>
+			</Helmet>
 			<section className='text-gray-700 body-font relative'>
 				<div className='container px-5 py-24 mx-auto'>
 					<div className='flex flex-col text-center w-full mb-12'>
