@@ -172,6 +172,11 @@ const updateUser = asyncHandler(async (req, res) => {
 	}
 })
 
+// const admins = await User.find({ isAdmin: true })
+// if (admins.length === 0) {
+// 	throw Error("admin user can't be deleted")
+// }
+
 export {
 	authUser,
 	getUserProfile,
