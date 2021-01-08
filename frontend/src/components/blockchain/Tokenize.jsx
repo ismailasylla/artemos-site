@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import Signature from '../Signature'
 import { Button } from 'react-bootstrap'
 import { Row, Col } from 'react-bootstrap'
-import NewsLetter from '../NewsLetter'
+// import NewsLetter from '../NewsLetter'
 
 const Tokenize = () => {
 	const Font = {
@@ -153,6 +153,18 @@ const Tokenize = () => {
 							</div>
 						</Col>
 					</Row>
+					<section className='tokenize-bg'>
+						<div className='container  d-flex justify-content-center p-5'>
+							<a href='https://alphaseed-tech.herokuapp.com/'>
+								<Button
+									type='submit'
+									variant='primary'
+									className='button-color m-2 '>
+									Tokenize Now<i className='fas fa-coins ml-2'></i>
+								</Button>{' '}
+							</a>
+						</div>
+					</section>
 
 					<div className='row' style={{ padding: '50px' }}>
 						<div className='col-sm'>
@@ -201,22 +213,8 @@ const Tokenize = () => {
 					</div>
 				</>
 			</section>
-			<section className='tokenize-bg'>
-				<div className='container  d-flex justify-content-center p-5'>
-					<a href='https://alphaseed-tech.herokuapp.com/'>
-						<Button
-							type='submit'
-							variant='primary'
-							className='button-color m-2 '>
-							Tokenize Now<i className='fas fa-coins ml-2'></i>
-						</Button>{' '}
-					</a>
-				</div>
-			</section>
 
-			<>
-				<NewsLetter />
-			</>
+			<>{/* <NewsLetter /> */}</>
 		</>
 	)
 }
