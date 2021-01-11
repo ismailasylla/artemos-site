@@ -8,6 +8,7 @@ import Loader from '../../components/Loader'
 import { register } from '../../actions/userActions'
 import FormContainer from '../FormContainer'
 import Logo from '../../images/logo/logo.png'
+import SocialMediaLink from '../SocialMediaLink'
 
 const RegisterScreen = ({ location, history }) => {
 	const [name, setName] = useState('')
@@ -53,7 +54,7 @@ const RegisterScreen = ({ location, history }) => {
 			</h1>
 			<div className='container loginRegister-bg  mb-5 '>
 				<FormContainer>
-					<h1 style={{ color: 'rgb(21, 71, 44)' }}>Sign Up</h1>
+					<h1 style={{ color: 'rgb(20 80 89)' }}>Sign Up</h1>
 					{message && <Message variant='danger'>{message}</Message>}
 					{error && <Message variant='danger'>{error}</Message>}
 					{loading && <Loader />}
@@ -108,6 +109,7 @@ const RegisterScreen = ({ location, history }) => {
 							</Link>
 						</Col>
 					</Row>
+					<SocialMediaLink />
 				</FormContainer>
 			</div>
 		</>

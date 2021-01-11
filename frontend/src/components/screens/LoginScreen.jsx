@@ -8,6 +8,7 @@ import Loader from '../../components/Loader'
 import { login } from '../../actions/userActions'
 import FormContainer from '../FormContainer'
 import Logo from '../../images/logo/logo.png'
+import SocialMediaLink from '../SocialMediaLink'
 
 const LoginScreen = ({ location, history }) => {
 	const [email, setEmail] = useState('')
@@ -80,6 +81,11 @@ const LoginScreen = ({ location, history }) => {
 								to={redirect ? `/register?redirect=${redirect}` : `/register`}>
 								<strong style={{ color: '#145059' }}>Register</strong>{' '}
 							</Link>
+						</Col>
+					</Row>
+					<Row className='py-3'>
+						<Col>
+							<SocialMediaLink />
 						</Col>
 					</Row>
 				</FormContainer>
