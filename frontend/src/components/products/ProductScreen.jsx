@@ -20,6 +20,7 @@ import {
 import Rating from './Rating'
 import Loader from '../Loader'
 import Message from '../Message'
+import SocialShare from '../SocialShare'
 
 const ProductScreen = ({ history, match }) => {
 	const [qty, setQty] = useState(1)
@@ -117,6 +118,9 @@ const ProductScreen = ({ history, match }) => {
 									<span style={{ color: '#B12704' }} className='ml-2'>
 										$ {product.price}
 									</span>{' '}
+								</ListGroup.Item>
+								<ListGroup.Item>
+									<SocialShare />
 								</ListGroup.Item>
 							</ListGroup>
 							<ListGroup variant='flush'>

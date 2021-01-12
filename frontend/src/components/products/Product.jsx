@@ -1,8 +1,10 @@
 import React from 'react'
-import { Card, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Rating from './Rating'
 import Signature from '../Signature'
+import SocialShare from '../SocialShare'
+
 const Product = ({ product }) => {
 	return (
 		<>
@@ -17,37 +19,6 @@ const Product = ({ product }) => {
 					</div>
 				</Col>
 			</Row>
-			{/* <Card className='my-3 p-3 rounded '>
-				<Link to={`/product/${product._id}`}>
-					<Card.Img src={product.image} variant='top' />
-				</Link>
-				<Card.Body>
-					<Link to={`/product/${product._id}`}>
-						<Card.Title as='div'>
-							{' '}
-							<strong>{product.name}</strong>
-						</Card.Title>
-					</Link>
-					<Card.Text as='div'>
-						<div className='my-3'>
-							{product.rating} from {product.numReviews} Reviews
-						</div>
-					</Card.Text>
-					<Card.Text as='div'>
-						<Rating
-							value={product.rating}
-							text={`${product.numReviews} reviews`}
-						/>
-					</Card.Text>
-					<Card.Text as='h5' style={{ color: '#B12704' }}>
-						$ {product.price}{' '}
-					</Card.Text>
-				</Card.Body>
-				<Button variant='primary' className='button-color m-2' size='sm'>
-					Add to cart <i className='fab fa-opencart'></i>
-				</Button>{' '} 
-			</Card> */}
-
 			<div className='p-4'>
 				<div className='h-full border-2 border-gray-200 rounded-lg overflow-hidden'>
 					<Link to={`/product/${product._id}`}>
@@ -73,7 +44,7 @@ const Product = ({ product }) => {
 						<p
 							className='tracking-widest text-xs title-font font-medium text-gray-500 mb-1 d-flex justify-content-start'
 							style={{ color: '#B12704' }}>
-							Price: $ {product.price}
+							<strong>Price: $ {product.price}</strong>
 						</p>
 						<p className='tracking-widest text-xs title-font font-medium text-gray-500 mb-1 d-flex justify-content-start'>
 							{product.rating} from {product.numReviews} Reviews
@@ -82,6 +53,7 @@ const Product = ({ product }) => {
 							value={product.rating}
 							text={`${product.numReviews} reviews`}
 						/>
+						<SocialShare />
 					</div>
 				</div>
 			</div>
