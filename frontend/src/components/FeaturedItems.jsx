@@ -8,6 +8,7 @@ import Message from './Message'
 import { listTopProducts } from '../actions/productActions'
 import { Link } from 'react-router-dom'
 import Rating from './products/Rating'
+import SocialShare from './SocialShare'
 
 const FeaturedItems = () => {
 	const dispatch = useDispatch()
@@ -90,6 +91,7 @@ const FeaturedItems = () => {
 												value={product.rating}
 												text={`${product.numReviews} reviews`}
 											/>
+											<SocialShare />
 											<div className='flex items-center flex-wrap mb-2'>
 												{/* <Button
 													variant='primary'

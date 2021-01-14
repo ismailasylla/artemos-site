@@ -56,7 +56,18 @@ const UserListScreen = ({ history }) => {
 						{users.map((user) => (
 							<tr key={user._id}>
 								<td>{user._id}</td>
-								<td>{user.name}</td>
+								<LinkContainer to={`/admin/user/profile/${user._id}`}>
+									<td>
+										<img
+											src='https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg'
+											alt=''
+											className='rounded-circle mb-2 float-left'
+											style={{ width: '30px' }}
+										/>
+										<span className='float-left ml-2'>{user.name}</span>
+									</td>
+								</LinkContainer>
+
 								<td>
 									<a href={`mailto:${user.email}`}>{user.email}</a>
 								</td>
