@@ -114,9 +114,9 @@ const ProductScreen = ({ history, match }) => {
 							</ListGroup>
 							<ListGroup variant='flush'>
 								<ListGroup.Item>
-									Price:
+									<strong>Price:</strong>
 									<span style={{ color: '#B12704' }} className='ml-2'>
-										$ {product.price}
+										$ <strong>{product.price}</strong>
 									</span>{' '}
 								</ListGroup.Item>
 								<ListGroup.Item>
@@ -125,7 +125,8 @@ const ProductScreen = ({ history, match }) => {
 							</ListGroup>
 							<ListGroup variant='flush'>
 								<ListGroup.Item>
-									Description: {product.description}
+									<h5>Description</h5>
+									{product.description}
 								</ListGroup.Item>
 							</ListGroup>
 						</Col>
@@ -134,7 +135,9 @@ const ProductScreen = ({ history, match }) => {
 								<ListGroup variant='flush'>
 									<ListGroup.Item>
 										<Row>
-											<Col>Price: </Col>
+											<Col>
+												<strong>Price:</strong>
+											</Col>
 											<Col>
 												<strong style={{ color: '#B12704' }}>
 													$ {product.price}
@@ -144,20 +147,28 @@ const ProductScreen = ({ history, match }) => {
 									</ListGroup.Item>
 									<ListGroup.Item>
 										<Row>
-											<Col>Status: </Col>
 											<Col>
-												<span style={{ color: 'green' }}>
-													{product.countInStock > 0
-														? 'In Stock'
-														: 'Out Of Stock'}
-												</span>
+												<strong>Status:</strong>{' '}
+											</Col>
+											<Col>
+												<strong>
+													{' '}
+													<span style={{ color: 'green' }}>
+														{product.countInStock > 0
+															? 'In Stock'
+															: 'Out Of Stock'}
+													</span>
+												</strong>
 											</Col>
 										</Row>
 									</ListGroup.Item>
 									{product.countInStock > 0 && (
 										<ListGroup.Item>
 											<Row>
-												<Col>Qty</Col>
+												<Col>
+													<strong>Qty</strong>
+												</Col>
+
 												<Col>
 													<Form.Control
 														as='select'

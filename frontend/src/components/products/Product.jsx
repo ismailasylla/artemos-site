@@ -44,7 +44,9 @@ const Product = ({ product }) => {
 						<p
 							className='tracking-widest text-xs title-font font-medium text-gray-500 mb-1 d-flex justify-content-start'
 							style={{ color: '#B12704' }}>
-							<strong>Price: $ {product.price}</strong>
+							<strong>
+								Price: $ <strong>{product.price}</strong>
+							</strong>
 						</p>
 						<p className='tracking-widest text-xs title-font font-medium text-gray-500 mb-1 d-flex justify-content-start'>
 							{product.rating} from {product.numReviews} Reviews

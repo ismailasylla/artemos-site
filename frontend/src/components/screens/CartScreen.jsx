@@ -68,7 +68,9 @@ const CartScreen = ({ match, location, history }) => {
 								to='/products'
 								style={{ textDecoration: 'none', color: '#145059' }}>
 								{' '}
-								<i className='fas fa-arrow-left'></i> Go Back
+								<strong>
+									<i className='fas fa-arrow-left'></i> Go Back
+								</strong>
 							</Link>
 						</Message>
 					) : (
@@ -122,7 +124,9 @@ const CartScreen = ({ match, location, history }) => {
 								<h2>
 									Subtotal{''}
 									<span className='badge badge-pill badge-danger m-1'>
-										{cartItems.reduce((acc, item) => acc + item.qty, 0)}{' '}
+										<strong>
+											{cartItems.reduce((acc, item) => acc + item.qty, 0)}{' '}
+										</strong>
 									</span>
 									items
 								</h2>
