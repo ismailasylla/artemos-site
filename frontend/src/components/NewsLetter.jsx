@@ -22,7 +22,7 @@ const NewsLetter = () => {
 								</h2>{' '}
 							</h1>
 						</div>
-						<div className='col-sm'>
+						{/* <div className='col-sm'>
 							<div class='subscription-wrapper'>
 								<div class='d-flex subscription-content justify-content-between align-items-center flex-column flex-md-row text-center text-md-left'>
 									<form action='#' class='row flex-fill'>
@@ -47,7 +47,7 @@ const NewsLetter = () => {
 									</form>
 								</div>
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</>
 			</section>
