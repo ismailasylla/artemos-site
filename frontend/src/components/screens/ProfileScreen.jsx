@@ -143,7 +143,9 @@ const ProfileScreen = ({ location, history }) => {
 												</span>
 											</i>
 										) : (
-											<i className='fas fa-times' style={{ color: 'red' }}></i>
+											<i className='fas fa-times' style={{ color: 'red' }}>
+												<span className='m-1'>Not Paid</span>
+											</i>
 										)}
 									</td>
 									<td>
