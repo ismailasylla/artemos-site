@@ -64,12 +64,16 @@ const UserListScreen = ({ history }) => {
 											className='rounded-circle mb-2 float-left'
 											style={{ width: '30px' }}
 										/>
-										<span className='float-left ml-2'>{user.name}</span>
+										<span className='float-left ml-2'>
+											<strong>{user.name}</strong>
+										</span>
 									</td>
 								</LinkContainer>
 
 								<td>
-									<a href={`mailto:${user.email}`}>{user.email}</a>
+									<a href={`mailto:${user.email}`} style={{ color: 'blue' }}>
+										{user.email}
+									</a>
 								</td>
 								<td>
 									{user.isAdmin ? (
@@ -79,7 +83,9 @@ const UserListScreen = ({ history }) => {
 									)}
 								</td>
 								<td>
-									<LinkContainer to={`/admin/user/${user._id}/edit`}>
+									<LinkContainer
+										to={`/admin/user/${user._id}/edit`}
+										className='m-1'>
 										<Button variant='light' className='btn-sm'>
 											<i className='fas fa-edit'></i>
 										</Button>
