@@ -1,3 +1,5 @@
+/** @format */
+
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -168,6 +170,8 @@ const ProductEditScreen = ({ match, history }) => {
 							<Form.Label>Description</Form.Label>
 							<Form.Control
 								type='text'
+								as='textarea'
+								rows={3}
 								placeholder='Enter description'
 								value={description}
 								onChange={(e) => setDescription(e.target.value)}></Form.Control>
