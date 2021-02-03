@@ -87,7 +87,8 @@ const Header = () => {
 							<LinkContainer
 								to='/about'
 								style={{ textDecoration: 'none' }}
-								data-toggle='collapse'>
+								data-toggle='collapse'
+								data-target='.navbar-collapse.show'>
 								<NavDropdown.Item href='#action/3.1'>
 									Who We Are{' '}
 								</NavDropdown.Item>
