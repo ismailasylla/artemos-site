@@ -1,3 +1,5 @@
+/** @format */
+
 import React from 'react'
 import { Route } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
@@ -31,7 +33,11 @@ const Header = () => {
 	return (
 		<header>
 			<Navbar bg='light' expand='lg' id='navbar_top'>
-				<LinkContainer to='/' style={{ textDecoration: 'none' }}>
+				<LinkContainer
+					to='/'
+					style={{ textDecoration: 'none' }}
+					data-toggle='collapse'
+					data-target='.navbar-collapse.show'>
 					<Navbar.Brand className='logo '>
 						<img src={Logo} alt='' style={{ width: '144px' }} />
 					</Navbar.Brand>
@@ -40,34 +46,57 @@ const Header = () => {
 				<Navbar.Collapse id='basic-navbar-nav'>
 					<Nav className='ml-auto'>
 						<NavDropdown title='Buy' id='basic-nav-dropdown'>
-							<LinkContainer to='/products' style={{ textDecoration: 'none' }}>
+							<LinkContainer
+								to='/products'
+								style={{ textDecoration: 'none' }}
+								data-toggle='collapse'
+								data-target='.navbar-collapse.show'>
 								<NavDropdown.Item>Arts</NavDropdown.Item>
 							</LinkContainer>
 
 							<NavDropdown.Divider />
-							<NavDropdown.Item href='#'>Separated link</NavDropdown.Item>
+							<NavDropdown.Item
+								href='#'
+								data-toggle='collapse'
+								data-target='.navbar-collapse.show'>
+								Separated link
+							</NavDropdown.Item>
 						</NavDropdown>
 
 						{/* <Nav.Link href='#link'>Sell</Nav.Link> */}
 						<NavDropdown title='Services' id='basic-nav-dropdown'>
 							<NavDropdown.Item href='#action/3.1'>Fine Art</NavDropdown.Item>
-							<NavDropdown.Item href='#action/3.2'>
+							<NavDropdown.Item
+								href='#action/3.2'
+								data-toggle='collapse'
+								data-target='.navbar-collapse.show'>
 								Collectible
 							</NavDropdown.Item>
 
 							<NavDropdown.Item href='#action/3.3'>Wealth</NavDropdown.Item>
 							<NavDropdown.Divider />
-							<LinkContainer to='/tokenize' style={{ textDecoration: 'none' }}>
+							<LinkContainer
+								to='/tokenize'
+								style={{ textDecoration: 'none' }}
+								data-toggle='collapse'
+								data-target='.navbar-collapse.show'>
 								<NavDropdown.Item>Tokenize</NavDropdown.Item>
 							</LinkContainer>
 						</NavDropdown>
 						<NavDropdown title='More' id='basic-nav-dropdown'>
-							<LinkContainer to='/about' style={{ textDecoration: 'none' }}>
+							<LinkContainer
+								to='/about'
+								style={{ textDecoration: 'none' }}
+								data-toggle='collapse'>
 								<NavDropdown.Item href='#action/3.1'>
 									Who We Are{' '}
 								</NavDropdown.Item>
 							</LinkContainer>
-							<LinkContainer to='/contact' style={{ textDecoration: 'none' }}>
+							<LinkContainer
+								to='/contact'
+								style={{ textDecoration: 'none' }}
+								data-toggle='collapse'
+								data-target='.navbar-collapse.show'>
 								<NavDropdown.Item href='#action/3.2'>Contact</NavDropdown.Item>
 							</LinkContainer>
 						</NavDropdown>
@@ -84,17 +113,27 @@ const Header = () => {
 									style={{ width: '40px' }}
 								/>
 								<NavDropdown title={`Hello, ${userInfo.name} `} id='username'>
-									<LinkContainer to='/profile'>
+									<LinkContainer
+										to='/profile'
+										data-toggle='collapse'
+										data-target='.navbar-collapse.show'>
 										<NavDropdown.Item>Profile</NavDropdown.Item>
 									</LinkContainer>
-									<NavDropdown.Item onClick={logoutHandler}>
+									<NavDropdown.Item
+										onClick={logoutHandler}
+										data-toggle='collapse'
+										data-target='.navbar-collapse.show'>
 										Logout
 									</NavDropdown.Item>
 								</NavDropdown>
 							</>
 						) : (
 							<>
-								<Link to='/login' style={{ textDecoration: 'none' }}>
+								<Link
+									to='/login'
+									style={{ textDecoration: 'none' }}
+									data-toggle='collapse'
+									data-target='.navbar-collapse.show'>
 									<Button
 										variant='primary'
 										className='button-color m-2'
@@ -103,7 +142,11 @@ const Header = () => {
 									</Button>{' '}
 								</Link>
 
-								<Link to='/register' style={{ textDecoration: 'none' }}>
+								<Link
+									to='/register'
+									style={{ textDecoration: 'none' }}
+									data-toggle='collapse'
+									data-target='.navbar-collapse.show'>
 									<Button
 										variant='primary'
 										className='button-color m-2'
@@ -123,17 +166,29 @@ const Header = () => {
 								style={{ width: '40px' }}
 							/>
 							<NavDropdown title='Admin' id='adminmenu'>
-								<LinkContainer to='/profile'>
+								<LinkContainer
+									to='/profile'
+									data-toggle='collapse'
+									data-target='.navbar-collapse.show'>
 									<NavDropdown.Item>Profile</NavDropdown.Item>
 								</LinkContainer>
 
-								<LinkContainer to='/admin/userlist'>
+								<LinkContainer
+									to='/admin/userlist'
+									data-toggle='collapse'
+									data-target='.navbar-collapse.show'>
 									<NavDropdown.Item>Users</NavDropdown.Item>
 								</LinkContainer>
-								<LinkContainer to='/admin/productlist'>
+								<LinkContainer
+									to='/admin/productlist'
+									data-toggle='collapse'
+									data-target='.navbar-collapse.show'>
 									<NavDropdown.Item>Products</NavDropdown.Item>
 								</LinkContainer>
-								<LinkContainer to='/admin/orderlist'>
+								<LinkContainer
+									to='/admin/orderlist'
+									data-toggle='collapse'
+									data-target='.navbar-collapse.show'>
 									<NavDropdown.Item>Orders</NavDropdown.Item>
 								</LinkContainer>
 								<NavDropdown.Item onClick={logoutHandler}>
@@ -142,7 +197,11 @@ const Header = () => {
 							</NavDropdown>
 						</>
 					)}
-					<LinkContainer to='/cart' className='mr-5'>
+					<LinkContainer
+						to='/cart'
+						className='mr-5'
+						data-toggle='collapse'
+						data-target='.navbar-collapse.show'>
 						<Nav.Link>
 							{' '}
 							<span className='badge badge-pill badge-danger larger-badge mr-2'>
